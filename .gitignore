@@ -1,6 +1,9 @@
 images/
 3D-CNN-PyTorch/
-preprocess/
+*.pt
+*.pth
+*.out
+*.err
 segmentations/
 nnUNet_pretrained_weights/
 patient_info_files/
