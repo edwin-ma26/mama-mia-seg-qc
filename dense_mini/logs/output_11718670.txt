@@ -1,0 +1,16 @@
+[MAIN] Calling train_single_gpu()...
+[MAIN] Starting training script...
+[MAIN] Using device: cuda
+[DATA] Loading dataset...
+[INFO] Initializing MRIDataset for: ../preprocess/preprocessed_train
+[INFO] Found 136 .pt files in ../preprocess/preprocessed_train
+[DATA] Splitting into train/val sets...
+[DATA] Train size: 109, Val size: 27
+[DATA] Dataloaders ready.
+[MODEL] Initializing DenseNet model...
+[MODEL] Model initialized.
+
+[TRAIN] === Epoch 1/5 ===
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 1][Batch 000] Loss: 0.6836 | Preds: [0.5] | Targets: [1.]
+[TRAIN] --- Batch 1 ---

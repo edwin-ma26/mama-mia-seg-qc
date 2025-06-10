@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/anvil/projects/x-cis230030/mama-mia/res_mini/main.py", line 166, in <module>
+    train_single_gpu()
+  File "/anvil/projects/x-cis230030/mama-mia/res_mini/main.py", line 125, in train_single_gpu
+    model = generate_model().to(device)
+  File "/anvil/projects/x-cis230030/mama-mia/res_mini/main.py", line 103, in generate_model
+    model = resnet.resnet50(
+AttributeError: module 'models.resnet' has no attribute 'resnet50'

@@ -1,0 +1,7 @@
+Epoch 1, Loss: 0.7537
+Epoch 2, Loss: 0.6072
+Epoch 3, Loss: 0.4789
+Epoch 4, Loss: 0.3790
+Epoch 5, Loss: 0.2980
+Prediction: 1
+GPU memory used: 205.28 MB

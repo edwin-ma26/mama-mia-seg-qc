@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/anvil/projects/x-cis230030/mama-mia/cnn_mini/main.py", line 158, in <module>
+    train_single_gpu()
+  File "/anvil/projects/x-cis230030/mama-mia/cnn_mini/main.py", line 117, in train_single_gpu
+    model = generate_model().to(device)
+  File "/anvil/projects/x-cis230030/mama-mia/cnn_mini/main.py", line 103, in generate_model
+    model = cnn.CNN3D(num_classes=1, input_shape=(2, 128, 128, 128))
+AttributeError: module 'models.cnn' has no attribute 'CNN3D'. Did you mean: 'cnn3d'?

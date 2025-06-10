@@ -1,0 +1,10 @@
+[TRAIN] Starting training on single GPU...
+[TRAIN] Using device: cuda
+[INFO] Initializing MRIDataset for split='train'...
+[INFO] Found 100 patients for split 'train'.
+[INFO] Loaded 100 valid image-mask pairs.
+[INFO] Label distribution: {1: np.int64(74), 0: np.int64(26)}
+[TRAIN] Dataloader ready with 13 batches.
+[INFO] Initializing ResNet model...
+[INFO] Model initialized.
+[TRAIN] Entering training loop.

@@ -1,0 +1,8 @@
+=== Single GPU Resource Usage Report ===
+Training samples: 80
+Validation samples: 20
+Training time: 16.41 seconds
+Validation Loss: 0.3780
+Validation Accuracy: 0.8000
+Peak GPU memory: 40359.28 MB
+CPU memory usage (RSS): 1397.75 MB

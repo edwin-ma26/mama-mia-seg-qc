@@ -1,0 +1,1705 @@
+[MAIN] Calling train_single_gpu()...
+[MAIN] Starting training script...
+[MAIN] Using device: cuda
+[DATA] Loading dataset...
+[INFO] Initializing MRIDataset for: ../preprocess/preprocessed_train
+[INFO] Found 100 .pt files in ../preprocess/preprocessed_train
+[DATA] Splitting into train/val sets...
+[DATA] Train size: 80, Val size: 20
+[DATA] Initializing dataloaders...
+[DATA] Dataloaders ready.
+[MODEL] Generating model...
+[MODEL] Initializing ResNet model...
+[MODEL] Model initialized.
+[TRAIN] Starting training loop...
+
+[TRAIN] === Epoch 1/5 ===
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 1][Batch 000] Loss: 0.6838 | Preds: [0.5] | Targets: [0.]
+[TRAIN] Batch 0 complete. Time: 8.50s
+
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 1][Batch 001] Loss: 0.4503 | Preds: [0.36] | Targets: [0.]
+[TRAIN] Batch 1 complete. Time: 0.04s
+
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 1][Batch 002] Loss: 0.2856 | Preds: [0.25] | Targets: [0.]
+[TRAIN] Batch 2 complete. Time: 0.03s
+
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 1][Batch 003] Loss: 1.7702 | Preds: [0.17] | Targets: [1.]
+[TRAIN] Batch 3 complete. Time: 0.03s
+
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 1][Batch 004] Loss: 1.7566 | Preds: [0.17] | Targets: [1.]
+[TRAIN] Batch 4 complete. Time: 0.03s
+
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 1][Batch 005] Loss: 0.2467 | Preds: [0.22] | Targets: [0.]
+[TRAIN] Batch 5 complete. Time: 0.03s
+
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 1][Batch 006] Loss: 0.2826 | Preds: [0.25] | Targets: [0.]
+[TRAIN] Batch 6 complete. Time: 0.03s
+
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 1][Batch 007] Loss: 1.3808 | Preds: [0.25] | Targets: [1.]
+[TRAIN] Batch 7 complete. Time: 0.03s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 1][Batch 008] Loss: 0.3261 | Preds: [0.28] | Targets: [0.]
+[TRAIN] Batch 8 complete. Time: 0.03s
+
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 1][Batch 009] Loss: 1.1411 | Preds: [0.32] | Targets: [1.]
+[TRAIN] Batch 9 complete. Time: 0.03s
+
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 1][Batch 010] Loss: 0.4423 | Preds: [0.36] | Targets: [0.]
+[TRAIN] Batch 10 complete. Time: 0.03s
+
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 1][Batch 011] Loss: 0.9974 | Preds: [0.37] | Targets: [1.]
+[TRAIN] Batch 11 complete. Time: 0.03s
+
+[DATA] Loading .pt file #90: ../preprocess/preprocessed_train/DUKE_378.pt
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 1][Batch 012] Loss: 0.8793 | Preds: [0.42] | Targets: [1.]
+[TRAIN] Batch 12 complete. Time: 0.03s
+
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 1][Batch 013] Loss: 0.7313 | Preds: [0.48] | Targets: [1.]
+[TRAIN] Batch 13 complete. Time: 0.03s
+
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 1][Batch 014] Loss: 0.7959 | Preds: [0.55] | Targets: [0.]
+[TRAIN] Batch 14 complete. Time: 0.03s
+
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 1][Batch 015] Loss: 0.5203 | Preds: [0.59] | Targets: [1.]
+[TRAIN] Batch 15 complete. Time: 0.03s
+
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150.pt
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 1][Batch 016] Loss: 0.5039 | Preds: [0.6] | Targets: [1.]
+[TRAIN] Batch 16 complete. Time: 0.03s
+
+[TRAIN] --- Batch 17 ---
+[TRAIN][Epoch 1][Batch 017] Loss: 1.1498 | Preds: [0.68] | Targets: [0.]
+[TRAIN] Batch 17 complete. Time: 0.03s
+
+[TRAIN] --- Batch 18 ---
+[TRAIN][Epoch 1][Batch 018] Loss: 0.3239 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 18 complete. Time: 0.03s
+
+[TRAIN] --- Batch 19 ---
+[TRAIN][Epoch 1][Batch 019] Loss: 0.3040 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 19 complete. Time: 0.03s
+
+[TRAIN] --- Batch 20 ---
+[TRAIN][Epoch 1][Batch 020] Loss: 0.2892 | Preds: [0.75] | Targets: [1.]
+[TRAIN] Batch 20 complete. Time: 0.03s
+
+[TRAIN] --- Batch 21 ---
+[TRAIN][Epoch 1][Batch 021] Loss: 1.5880 | Preds: [0.8] | Targets: [0.]
+[TRAIN] Batch 21 complete. Time: 0.03s
+
+[TRAIN] --- Batch 22 ---
+[TRAIN][Epoch 1][Batch 022] Loss: 0.2380 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 22 complete. Time: 0.03s
+
+[TRAIN] --- Batch 23 ---
+[TRAIN][Epoch 1][Batch 023] Loss: 0.2148 | Preds: [0.81] | Targets: [1.]
+[TRAIN] Batch 23 complete. Time: 0.03s
+
+[TRAIN] --- Batch 24 ---
+[TRAIN][Epoch 1][Batch 024] Loss: 0.2220 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 24 complete. Time: 0.03s
+
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328.pt
+[TRAIN] --- Batch 25 ---
+[TRAIN][Epoch 1][Batch 025] Loss: 0.1933 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 25 complete. Time: 0.03s
+
+[TRAIN] --- Batch 26 ---
+[TRAIN][Epoch 1][Batch 026] Loss: 0.1875 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 26 complete. Time: 0.03s
+
+[TRAIN] --- Batch 27 ---
+[TRAIN][Epoch 1][Batch 027] Loss: 0.1830 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 27 complete. Time: 0.03s
+
+[TRAIN] --- Batch 28 ---
+[TRAIN][Epoch 1][Batch 028] Loss: 0.1565 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 28 complete. Time: 0.03s
+
+[TRAIN] --- Batch 29 ---
+[TRAIN][Epoch 1][Batch 029] Loss: 0.1265 | Preds: [0.88] | Targets: [1.]
+[TRAIN] Batch 29 complete. Time: 0.03s
+
+[TRAIN] --- Batch 30 ---
+[TRAIN][Epoch 1][Batch 030] Loss: 0.0884 | Preds: [0.92] | Targets: [1.]
+[TRAIN] Batch 30 complete. Time: 0.03s
+
+[TRAIN] --- Batch 31 ---
+[TRAIN][Epoch 1][Batch 031] Loss: 2.4773 | Preds: [0.92] | Targets: [0.]
+[TRAIN] Batch 31 complete. Time: 0.03s
+
+[TRAIN] --- Batch 32 ---
+[TRAIN][Epoch 1][Batch 032] Loss: 2.4368 | Preds: [0.91] | Targets: [0.]
+[TRAIN] Batch 32 complete. Time: 0.03s
+
+[DATA] Loading .pt file #10: ../preprocess/preprocessed_train/DUKE_041.pt
+[TRAIN] --- Batch 33 ---
+[TRAIN][Epoch 1][Batch 033] Loss: 0.1004 | Preds: [0.9] | Targets: [1.]
+[TRAIN] Batch 33 complete. Time: 0.03s
+
+[TRAIN] --- Batch 34 ---
+[TRAIN][Epoch 1][Batch 034] Loss: 0.1211 | Preds: [0.89] | Targets: [1.]
+[TRAIN] Batch 34 complete. Time: 0.03s
+
+[TRAIN] --- Batch 35 ---
+[TRAIN][Epoch 1][Batch 035] Loss: 2.1528 | Preds: [0.88] | Targets: [0.]
+[TRAIN] Batch 35 complete. Time: 0.03s
+
+[TRAIN] --- Batch 36 ---
+[TRAIN][Epoch 1][Batch 036] Loss: 0.1480 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 36 complete. Time: 0.03s
+
+[TRAIN] --- Batch 37 ---
+[TRAIN][Epoch 1][Batch 037] Loss: 0.1915 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 37 complete. Time: 0.03s
+
+[TRAIN] --- Batch 38 ---
+[TRAIN][Epoch 1][Batch 038] Loss: 0.2252 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 38 complete. Time: 0.03s
+
+[TRAIN] --- Batch 39 ---
+[TRAIN][Epoch 1][Batch 039] Loss: 0.2476 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 39 complete. Time: 0.03s
+
+[TRAIN] --- Batch 40 ---
+[TRAIN][Epoch 1][Batch 040] Loss: 0.2274 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 40 complete. Time: 0.03s
+
+[TRAIN] --- Batch 41 ---
+[TRAIN][Epoch 1][Batch 041] Loss: 1.5990 | Preds: [0.8] | Targets: [0.]
+[TRAIN] Batch 41 complete. Time: 0.03s
+
+[TRAIN] --- Batch 42 ---
+[TRAIN][Epoch 1][Batch 042] Loss: 0.2670 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 42 complete. Time: 0.03s
+
+[TRAIN] --- Batch 43 ---
+[TRAIN][Epoch 1][Batch 043] Loss: 0.2841 | Preds: [0.75] | Targets: [1.]
+[TRAIN] Batch 43 complete. Time: 0.03s
+
+[TRAIN] --- Batch 44 ---
+[TRAIN][Epoch 1][Batch 044] Loss: 1.4310 | Preds: [0.76] | Targets: [0.]
+[TRAIN] Batch 44 complete. Time: 0.03s
+
+[TRAIN] --- Batch 45 ---
+[TRAIN][Epoch 1][Batch 045] Loss: 1.2936 | Preds: [0.73] | Targets: [0.]
+[TRAIN] Batch 45 complete. Time: 0.03s
+
+[TRAIN] --- Batch 46 ---
+[TRAIN][Epoch 1][Batch 046] Loss: 0.3837 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 46 complete. Time: 0.03s
+
+[TRAIN] --- Batch 47 ---
+[TRAIN][Epoch 1][Batch 047] Loss: 0.4509 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 47 complete. Time: 0.03s
+
+[TRAIN] --- Batch 48 ---
+[TRAIN][Epoch 1][Batch 048] Loss: 0.4822 | Preds: [0.62] | Targets: [1.]
+[TRAIN] Batch 48 complete. Time: 0.03s
+
+[TRAIN] --- Batch 49 ---
+[TRAIN][Epoch 1][Batch 049] Loss: 0.4972 | Preds: [0.61] | Targets: [1.]
+[TRAIN] Batch 49 complete. Time: 0.03s
+
+[TRAIN] --- Batch 50 ---
+[TRAIN][Epoch 1][Batch 050] Loss: 0.4675 | Preds: [0.63] | Targets: [1.]
+[TRAIN] Batch 50 complete. Time: 0.03s
+
+[DATA] Loading .pt file #20: ../preprocess/preprocessed_train/DUKE_082.pt
+[TRAIN] --- Batch 51 ---
+[TRAIN][Epoch 1][Batch 051] Loss: 0.4211 | Preds: [0.66] | Targets: [1.]
+[TRAIN] Batch 51 complete. Time: 0.03s
+
+[TRAIN] --- Batch 52 ---
+[TRAIN][Epoch 1][Batch 052] Loss: 0.3849 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 52 complete. Time: 0.03s
+
+[TRAIN] --- Batch 53 ---
+[TRAIN][Epoch 1][Batch 053] Loss: 0.3264 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 53 complete. Time: 0.03s
+
+[TRAIN] --- Batch 54 ---
+[TRAIN][Epoch 1][Batch 054] Loss: 0.2777 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 54 complete. Time: 0.03s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117.pt
+[TRAIN] --- Batch 55 ---
+[TRAIN][Epoch 1][Batch 055] Loss: 0.2214 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 55 complete. Time: 0.03s
+
+[TRAIN] --- Batch 56 ---
+[TRAIN][Epoch 1][Batch 056] Loss: 1.7775 | Preds: [0.83] | Targets: [0.]
+[TRAIN] Batch 56 complete. Time: 0.03s
+
+[TRAIN] --- Batch 57 ---
+[TRAIN][Epoch 1][Batch 057] Loss: 0.1744 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 57 complete. Time: 0.03s
+
+[TRAIN] --- Batch 58 ---
+[TRAIN][Epoch 1][Batch 058] Loss: 0.1525 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 58 complete. Time: 0.03s
+
+[TRAIN] --- Batch 59 ---
+[TRAIN][Epoch 1][Batch 059] Loss: 0.1441 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 59 complete. Time: 0.03s
+
+[TRAIN] --- Batch 60 ---
+[TRAIN][Epoch 1][Batch 060] Loss: 0.1247 | Preds: [0.88] | Targets: [1.]
+[TRAIN] Batch 60 complete. Time: 0.03s
+
+[TRAIN] --- Batch 61 ---
+[TRAIN][Epoch 1][Batch 061] Loss: 0.1377 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 61 complete. Time: 0.03s
+
+[TRAIN] --- Batch 62 ---
+[TRAIN][Epoch 1][Batch 062] Loss: 2.3660 | Preds: [0.91] | Targets: [0.]
+[TRAIN] Batch 62 complete. Time: 0.03s
+
+[TRAIN] --- Batch 63 ---
+[TRAIN][Epoch 1][Batch 063] Loss: 2.1976 | Preds: [0.89] | Targets: [0.]
+[TRAIN] Batch 63 complete. Time: 0.03s
+
+[TRAIN] --- Batch 64 ---
+[TRAIN][Epoch 1][Batch 064] Loss: 0.1312 | Preds: [0.88] | Targets: [1.]
+[TRAIN] Batch 64 complete. Time: 0.03s
+
+[TRAIN] --- Batch 65 ---
+[TRAIN][Epoch 1][Batch 065] Loss: 0.1650 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 65 complete. Time: 0.03s
+
+[TRAIN] --- Batch 66 ---
+[TRAIN][Epoch 1][Batch 066] Loss: 0.1605 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 66 complete. Time: 0.03s
+
+[TRAIN] --- Batch 67 ---
+[TRAIN][Epoch 1][Batch 067] Loss: 1.9524 | Preds: [0.86] | Targets: [0.]
+[TRAIN] Batch 67 complete. Time: 0.03s
+
+[TRAIN] --- Batch 68 ---
+[TRAIN][Epoch 1][Batch 068] Loss: 0.1825 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 68 complete. Time: 0.03s
+
+[TRAIN] --- Batch 69 ---
+[TRAIN][Epoch 1][Batch 069] Loss: 0.2305 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 69 complete. Time: 0.03s
+
+[TRAIN] --- Batch 70 ---
+[TRAIN][Epoch 1][Batch 070] Loss: 0.2399 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 70 complete. Time: 0.03s
+
+[TRAIN] --- Batch 71 ---
+[TRAIN][Epoch 1][Batch 071] Loss: 0.2521 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 71 complete. Time: 0.03s
+
+[TRAIN] --- Batch 72 ---
+[TRAIN][Epoch 1][Batch 072] Loss: 1.5101 | Preds: [0.78] | Targets: [0.]
+[TRAIN] Batch 72 complete. Time: 0.03s
+
+[TRAIN] --- Batch 73 ---
+[TRAIN][Epoch 1][Batch 073] Loss: 0.2726 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 73 complete. Time: 0.03s
+
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192.pt
+[TRAIN] --- Batch 74 ---
+[TRAIN][Epoch 1][Batch 074] Loss: 1.3114 | Preds: [0.73] | Targets: [0.]
+[TRAIN] Batch 74 complete. Time: 0.03s
+
+[TRAIN] --- Batch 75 ---
+[TRAIN][Epoch 1][Batch 075] Loss: 0.3582 | Preds: [0.7] | Targets: [1.]
+[TRAIN] Batch 75 complete. Time: 0.03s
+
+[TRAIN] --- Batch 76 ---
+[TRAIN][Epoch 1][Batch 076] Loss: 0.3831 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 76 complete. Time: 0.03s
+
+[DATA] Loading .pt file #70: ../preprocess/preprocessed_train/DUKE_275.pt
+[TRAIN] --- Batch 77 ---
+[TRAIN][Epoch 1][Batch 077] Loss: 0.4110 | Preds: [0.66] | Targets: [1.]
+[TRAIN] Batch 77 complete. Time: 0.03s
+
+[TRAIN] --- Batch 78 ---
+[TRAIN][Epoch 1][Batch 078] Loss: 0.3856 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 78 complete. Time: 0.03s
+
+[TRAIN] --- Batch 79 ---
+[TRAIN][Epoch 1][Batch 079] Loss: 0.3598 | Preds: [0.7] | Targets: [1.]
+[TRAIN] Batch 79 complete. Time: 0.03s
+
+[VAL] Starting validation for epoch 1...
+[VAL] Batch 0
+[VAL] Batch 10
+[DATA] Loading .pt file #0: ../preprocess/preprocessed_train/DUKE_001.pt
+[DATA] Loading .pt file #60: ../preprocess/preprocessed_train/DUKE_239.pt
+[VAL][Epoch 1] Loss: 0.4884 | Accuracy: 0.8000
+[RESOURCE][Epoch 1] GPU Peak Memory: 40359.28 MB
+[SAVE] Model checkpoint saved to 'checkpoints/resnet_single_gpu_epoch1.pth'
+
+[TRAIN] === Epoch 2/5 ===
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 2][Batch 000] Loss: 0.3251 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 0 complete. Time: 0.03s
+
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 2][Batch 001] Loss: 0.2739 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 1 complete. Time: 0.03s
+
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 2][Batch 002] Loss: 0.2224 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 2 complete. Time: 0.03s
+
+[DATA] Loading .pt file #90: ../preprocess/preprocessed_train/DUKE_378.pt
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 2][Batch 003] Loss: 0.2027 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 3 complete. Time: 0.03s
+
+[DATA] Loading .pt file #10: ../preprocess/preprocessed_train/DUKE_041.pt
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 2][Batch 004] Loss: 0.1780 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 4 complete. Time: 0.03s
+
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 2][Batch 005] Loss: 0.1455 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 5 complete. Time: 0.03s
+
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 2][Batch 006] Loss: 0.1092 | Preds: [0.9] | Targets: [1.]
+[TRAIN] Batch 6 complete. Time: 0.03s
+
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 2][Batch 007] Loss: 0.1123 | Preds: [0.89] | Targets: [1.]
+[TRAIN] Batch 7 complete. Time: 0.03s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 2][Batch 008] Loss: 0.0896 | Preds: [0.91] | Targets: [1.]
+[TRAIN] Batch 8 complete. Time: 0.03s
+
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 2][Batch 009] Loss: 0.0680 | Preds: [0.93] | Targets: [1.]
+[TRAIN] Batch 9 complete. Time: 0.03s
+
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 2][Batch 010] Loss: 0.0652 | Preds: [0.94] | Targets: [1.]
+[TRAIN] Batch 10 complete. Time: 0.03s
+
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328.pt
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 2][Batch 011] Loss: 0.0566 | Preds: [0.94] | Targets: [1.]
+[TRAIN] Batch 11 complete. Time: 0.03s
+
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 2][Batch 012] Loss: 2.8107 | Preds: [0.94] | Targets: [0.]
+[TRAIN] Batch 12 complete. Time: 0.03s
+
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 2][Batch 013] Loss: 0.0635 | Preds: [0.94] | Targets: [1.]
+[TRAIN] Batch 13 complete. Time: 0.03s
+
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 2][Batch 014] Loss: 0.0590 | Preds: [0.94] | Targets: [1.]
+[TRAIN] Batch 14 complete. Time: 0.03s
+
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 2][Batch 015] Loss: 0.0491 | Preds: [0.95] | Targets: [1.]
+[TRAIN] Batch 15 complete. Time: 0.03s
+
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 2][Batch 016] Loss: 2.8876 | Preds: [0.94] | Targets: [0.]
+[TRAIN] Batch 16 complete. Time: 0.03s
+
+[TRAIN] --- Batch 17 ---
+[TRAIN][Epoch 2][Batch 017] Loss: 0.0738 | Preds: [0.93] | Targets: [1.]
+[TRAIN] Batch 17 complete. Time: 0.03s
+
+[TRAIN] --- Batch 18 ---
+[TRAIN][Epoch 2][Batch 018] Loss: 2.6920 | Preds: [0.93] | Targets: [0.]
+[TRAIN] Batch 18 complete. Time: 0.03s
+
+[TRAIN] --- Batch 19 ---
+[TRAIN][Epoch 2][Batch 019] Loss: 0.0736 | Preds: [0.93] | Targets: [1.]
+[TRAIN] Batch 19 complete. Time: 0.03s
+
+[TRAIN] --- Batch 20 ---
+[TRAIN][Epoch 2][Batch 020] Loss: 0.0979 | Preds: [0.91] | Targets: [1.]
+[TRAIN] Batch 20 complete. Time: 0.03s
+
+[TRAIN] --- Batch 21 ---
+[TRAIN][Epoch 2][Batch 021] Loss: 0.1294 | Preds: [0.88] | Targets: [1.]
+[TRAIN] Batch 21 complete. Time: 0.03s
+
+[TRAIN] --- Batch 22 ---
+[TRAIN][Epoch 2][Batch 022] Loss: 0.1451 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 22 complete. Time: 0.03s
+
+[TRAIN] --- Batch 23 ---
+[TRAIN][Epoch 2][Batch 023] Loss: 0.1502 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 23 complete. Time: 0.03s
+
+[TRAIN] --- Batch 24 ---
+[TRAIN][Epoch 2][Batch 024] Loss: 0.1484 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 24 complete. Time: 0.03s
+
+[TRAIN] --- Batch 25 ---
+[TRAIN][Epoch 2][Batch 025] Loss: 1.8634 | Preds: [0.84] | Targets: [0.]
+[TRAIN] Batch 25 complete. Time: 0.03s
+
+[TRAIN] --- Batch 26 ---
+[TRAIN][Epoch 2][Batch 026] Loss: 0.2409 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 26 complete. Time: 0.03s
+
+[TRAIN] --- Batch 27 ---
+[TRAIN][Epoch 2][Batch 027] Loss: 1.6320 | Preds: [0.8] | Targets: [0.]
+[TRAIN] Batch 27 complete. Time: 0.03s
+
+[TRAIN] --- Batch 28 ---
+[TRAIN][Epoch 2][Batch 028] Loss: 0.3112 | Preds: [0.73] | Targets: [1.]
+[TRAIN] Batch 28 complete. Time: 0.03s
+
+[TRAIN] --- Batch 29 ---
+[TRAIN][Epoch 2][Batch 029] Loss: 0.3428 | Preds: [0.71] | Targets: [1.]
+[TRAIN] Batch 29 complete. Time: 0.03s
+
+[TRAIN] --- Batch 30 ---
+[TRAIN][Epoch 2][Batch 030] Loss: 0.3596 | Preds: [0.7] | Targets: [1.]
+[TRAIN] Batch 30 complete. Time: 0.03s
+
+[TRAIN] --- Batch 31 ---
+[TRAIN][Epoch 2][Batch 031] Loss: 0.3108 | Preds: [0.73] | Targets: [1.]
+[TRAIN] Batch 31 complete. Time: 0.03s
+
+[TRAIN] --- Batch 32 ---
+[TRAIN][Epoch 2][Batch 032] Loss: 0.3850 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 32 complete. Time: 0.03s
+
+[TRAIN] --- Batch 33 ---
+[TRAIN][Epoch 2][Batch 033] Loss: 1.3411 | Preds: [0.74] | Targets: [0.]
+[TRAIN] Batch 33 complete. Time: 0.03s
+
+[TRAIN] --- Batch 34 ---
+[TRAIN][Epoch 2][Batch 034] Loss: 1.2389 | Preds: [0.71] | Targets: [0.]
+[TRAIN] Batch 34 complete. Time: 0.03s
+
+[TRAIN] --- Batch 35 ---
+[TRAIN][Epoch 2][Batch 035] Loss: 0.4487 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 35 complete. Time: 0.03s
+
+[TRAIN] --- Batch 36 ---
+[TRAIN][Epoch 2][Batch 036] Loss: 0.4406 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 36 complete. Time: 0.03s
+
+[TRAIN] --- Batch 37 ---
+[TRAIN][Epoch 2][Batch 037] Loss: 1.0246 | Preds: [0.64] | Targets: [0.]
+[TRAIN] Batch 37 complete. Time: 0.03s
+
+[TRAIN] --- Batch 38 ---
+[TRAIN][Epoch 2][Batch 038] Loss: 0.5310 | Preds: [0.59] | Targets: [1.]
+[TRAIN] Batch 38 complete. Time: 0.03s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117.pt
+[TRAIN] --- Batch 39 ---
+[TRAIN][Epoch 2][Batch 039] Loss: 0.5085 | Preds: [0.6] | Targets: [1.]
+[TRAIN] Batch 39 complete. Time: 0.03s
+
+[TRAIN] --- Batch 40 ---
+[TRAIN][Epoch 2][Batch 040] Loss: 0.5079 | Preds: [0.6] | Targets: [1.]
+[TRAIN] Batch 40 complete. Time: 0.03s
+
+[TRAIN] --- Batch 41 ---
+[TRAIN][Epoch 2][Batch 041] Loss: 0.9247 | Preds: [0.6] | Targets: [0.]
+[TRAIN] Batch 41 complete. Time: 0.03s
+
+[TRAIN] --- Batch 42 ---
+[TRAIN][Epoch 2][Batch 042] Loss: 0.4911 | Preds: [0.61] | Targets: [1.]
+[TRAIN] Batch 42 complete. Time: 0.03s
+
+[TRAIN] --- Batch 43 ---
+[TRAIN][Epoch 2][Batch 043] Loss: 0.4976 | Preds: [0.61] | Targets: [1.]
+[TRAIN] Batch 43 complete. Time: 0.03s
+
+[TRAIN] --- Batch 44 ---
+[TRAIN][Epoch 2][Batch 044] Loss: 0.4572 | Preds: [0.63] | Targets: [1.]
+[TRAIN] Batch 44 complete. Time: 0.03s
+
+[TRAIN] --- Batch 45 ---
+[TRAIN][Epoch 2][Batch 045] Loss: 0.4024 | Preds: [0.67] | Targets: [1.]
+[TRAIN] Batch 45 complete. Time: 0.03s
+
+[TRAIN] --- Batch 46 ---
+[TRAIN][Epoch 2][Batch 046] Loss: 1.2270 | Preds: [0.71] | Targets: [0.]
+[TRAIN] Batch 46 complete. Time: 0.03s
+
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150.pt
+[TRAIN] --- Batch 47 ---
+[TRAIN][Epoch 2][Batch 047] Loss: 0.3859 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 47 complete. Time: 0.03s
+
+[TRAIN] --- Batch 48 ---
+[TRAIN][Epoch 2][Batch 048] Loss: 0.3686 | Preds: [0.69] | Targets: [1.]
+[TRAIN] Batch 48 complete. Time: 0.03s
+
+[TRAIN] --- Batch 49 ---
+[TRAIN][Epoch 2][Batch 049] Loss: 1.3872 | Preds: [0.75] | Targets: [0.]
+[TRAIN] Batch 49 complete. Time: 0.03s
+
+[TRAIN] --- Batch 50 ---
+[TRAIN][Epoch 2][Batch 050] Loss: 0.2696 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 50 complete. Time: 0.03s
+
+[TRAIN] --- Batch 51 ---
+[TRAIN][Epoch 2][Batch 051] Loss: 0.2312 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 51 complete. Time: 0.03s
+
+[TRAIN] --- Batch 52 ---
+[TRAIN][Epoch 2][Batch 052] Loss: 0.2368 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 52 complete. Time: 0.03s
+
+[TRAIN] --- Batch 53 ---
+[TRAIN][Epoch 2][Batch 053] Loss: 0.2556 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 53 complete. Time: 0.03s
+
+[TRAIN] --- Batch 54 ---
+[TRAIN][Epoch 2][Batch 054] Loss: 1.6325 | Preds: [0.8] | Targets: [0.]
+[TRAIN] Batch 54 complete. Time: 0.03s
+
+[TRAIN] --- Batch 55 ---
+[TRAIN][Epoch 2][Batch 055] Loss: 0.1905 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 55 complete. Time: 0.03s
+
+[TRAIN] --- Batch 56 ---
+[TRAIN][Epoch 2][Batch 056] Loss: 1.7001 | Preds: [0.82] | Targets: [0.]
+[TRAIN] Batch 56 complete. Time: 0.03s
+
+[TRAIN] --- Batch 57 ---
+[TRAIN][Epoch 2][Batch 057] Loss: 0.2450 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 57 complete. Time: 0.03s
+
+[TRAIN] --- Batch 58 ---
+[TRAIN][Epoch 2][Batch 058] Loss: 0.2685 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 58 complete. Time: 0.03s
+
+[TRAIN] --- Batch 59 ---
+[TRAIN][Epoch 2][Batch 059] Loss: 1.5339 | Preds: [0.78] | Targets: [0.]
+[TRAIN] Batch 59 complete. Time: 0.03s
+
+[TRAIN] --- Batch 60 ---
+[TRAIN][Epoch 2][Batch 060] Loss: 0.3013 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 60 complete. Time: 0.03s
+
+[TRAIN] --- Batch 61 ---
+[TRAIN][Epoch 2][Batch 061] Loss: 0.3376 | Preds: [0.71] | Targets: [1.]
+[TRAIN] Batch 61 complete. Time: 0.03s
+
+[TRAIN] --- Batch 62 ---
+[TRAIN][Epoch 2][Batch 062] Loss: 0.3352 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 62 complete. Time: 0.03s
+
+[TRAIN] --- Batch 63 ---
+[TRAIN][Epoch 2][Batch 063] Loss: 0.3423 | Preds: [0.71] | Targets: [1.]
+[TRAIN] Batch 63 complete. Time: 0.03s
+
+[TRAIN] --- Batch 64 ---
+[TRAIN][Epoch 2][Batch 064] Loss: 0.2992 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 64 complete. Time: 0.03s
+
+[TRAIN] --- Batch 65 ---
+[TRAIN][Epoch 2][Batch 065] Loss: 0.2847 | Preds: [0.75] | Targets: [1.]
+[TRAIN] Batch 65 complete. Time: 0.03s
+
+[TRAIN] --- Batch 66 ---
+[TRAIN][Epoch 2][Batch 066] Loss: 1.4501 | Preds: [0.77] | Targets: [0.]
+[TRAIN] Batch 66 complete. Time: 0.03s
+
+[TRAIN] --- Batch 67 ---
+[TRAIN][Epoch 2][Batch 067] Loss: 1.3966 | Preds: [0.75] | Targets: [0.]
+[TRAIN] Batch 67 complete. Time: 0.03s
+
+[TRAIN] --- Batch 68 ---
+[TRAIN][Epoch 2][Batch 068] Loss: 1.3428 | Preds: [0.74] | Targets: [0.]
+[TRAIN] Batch 68 complete. Time: 0.03s
+
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192.pt
+[TRAIN] --- Batch 69 ---
+[TRAIN][Epoch 2][Batch 069] Loss: 1.1064 | Preds: [0.67] | Targets: [0.]
+[TRAIN] Batch 69 complete. Time: 0.03s
+
+[TRAIN] --- Batch 70 ---
+[TRAIN][Epoch 2][Batch 070] Loss: 0.5528 | Preds: [0.58] | Targets: [1.]
+[TRAIN] Batch 70 complete. Time: 0.03s
+
+[TRAIN] --- Batch 71 ---
+[TRAIN][Epoch 2][Batch 071] Loss: 0.7422 | Preds: [0.52] | Targets: [0.]
+[TRAIN] Batch 71 complete. Time: 0.03s
+
+[TRAIN] --- Batch 72 ---
+[TRAIN][Epoch 2][Batch 072] Loss: 0.5866 | Preds: [0.44] | Targets: [0.]
+[TRAIN] Batch 72 complete. Time: 0.03s
+
+[TRAIN] --- Batch 73 ---
+[TRAIN][Epoch 2][Batch 073] Loss: 0.4925 | Preds: [0.39] | Targets: [0.]
+[TRAIN] Batch 73 complete. Time: 0.03s
+
+[TRAIN] --- Batch 74 ---
+[TRAIN][Epoch 2][Batch 074] Loss: 0.4160 | Preds: [0.34] | Targets: [0.]
+[TRAIN] Batch 74 complete. Time: 0.03s
+
+[DATA] Loading .pt file #20: ../preprocess/preprocessed_train/DUKE_082.pt
+[TRAIN] --- Batch 75 ---
+[TRAIN][Epoch 2][Batch 075] Loss: 1.4562 | Preds: [0.23] | Targets: [1.]
+[TRAIN] Batch 75 complete. Time: 0.03s
+
+[TRAIN] --- Batch 76 ---
+[TRAIN][Epoch 2][Batch 076] Loss: 1.4465 | Preds: [0.24] | Targets: [1.]
+[TRAIN] Batch 76 complete. Time: 0.03s
+
+[DATA] Loading .pt file #70: ../preprocess/preprocessed_train/DUKE_275.pt
+[TRAIN] --- Batch 77 ---
+[TRAIN][Epoch 2][Batch 077] Loss: 1.6939 | Preds: [0.18] | Targets: [1.]
+[TRAIN] Batch 77 complete. Time: 0.03s
+
+[TRAIN] --- Batch 78 ---
+[TRAIN][Epoch 2][Batch 078] Loss: 1.5354 | Preds: [0.22] | Targets: [1.]
+[TRAIN] Batch 78 complete. Time: 0.03s
+
+[TRAIN] --- Batch 79 ---
+[TRAIN][Epoch 2][Batch 079] Loss: 1.2087 | Preds: [0.3] | Targets: [1.]
+[TRAIN] Batch 79 complete. Time: 0.03s
+
+[VAL] Starting validation for epoch 2...
+[VAL] Batch 0
+[VAL] Batch 10
+[DATA] Loading .pt file #0: ../preprocess/preprocessed_train/DUKE_001.pt
+[DATA] Loading .pt file #60: ../preprocess/preprocessed_train/DUKE_239.pt
+[VAL][Epoch 2] Loss: 2.7755 | Accuracy: 0.2000
+[RESOURCE][Epoch 2] GPU Peak Memory: 2193.63 MB
+[SAVE] Model checkpoint saved to 'checkpoints/resnet_single_gpu_epoch2.pth'
+
+[TRAIN] === Epoch 3/5 ===
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 3][Batch 000] Loss: 1.0449 | Preds: [0.35] | Targets: [1.]
+[TRAIN] Batch 0 complete. Time: 0.03s
+
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 3][Batch 001] Loss: 0.7904 | Preds: [0.45] | Targets: [1.]
+[TRAIN] Batch 1 complete. Time: 0.03s
+
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 3][Batch 002] Loss: 0.6768 | Preds: [0.49] | Targets: [0.]
+[TRAIN] Batch 2 complete. Time: 0.03s
+
+[DATA] Loading .pt file #90: ../preprocess/preprocessed_train/DUKE_378.pt
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 3][Batch 003] Loss: 0.4515 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 3 complete. Time: 0.03s
+
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 3][Batch 004] Loss: 1.0323 | Preds: [0.64] | Targets: [0.]
+[TRAIN] Batch 4 complete. Time: 0.03s
+
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 3][Batch 005] Loss: 0.3468 | Preds: [0.71] | Targets: [1.]
+[TRAIN] Batch 5 complete. Time: 0.03s
+
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 3][Batch 006] Loss: 0.3055 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 6 complete. Time: 0.03s
+
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150.pt
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 3][Batch 007] Loss: 0.2715 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 7 complete. Time: 0.03s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 3][Batch 008] Loss: 0.2058 | Preds: [0.81] | Targets: [1.]
+[TRAIN] Batch 8 complete. Time: 0.03s
+
+[DATA] Loading .pt file #70: ../preprocess/preprocessed_train/DUKE_275.pt
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 3][Batch 009] Loss: 0.1474 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 9 complete. Time: 0.03s
+
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 3][Batch 010] Loss: 1.7990 | Preds: [0.83] | Targets: [0.]
+[TRAIN] Batch 10 complete. Time: 0.03s
+
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 3][Batch 011] Loss: 0.1672 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 11 complete. Time: 0.03s
+
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 3][Batch 012] Loss: 1.9928 | Preds: [0.86] | Targets: [0.]
+[TRAIN] Batch 12 complete. Time: 0.03s
+
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 3][Batch 013] Loss: 0.1428 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 13 complete. Time: 0.03s
+
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 3][Batch 014] Loss: 0.1765 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 14 complete. Time: 0.03s
+
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 3][Batch 015] Loss: 0.1648 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 15 complete. Time: 0.03s
+
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 3][Batch 016] Loss: 0.1460 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 16 complete. Time: 0.03s
+
+[TRAIN] --- Batch 17 ---
+[TRAIN][Epoch 3][Batch 017] Loss: 0.1407 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 17 complete. Time: 0.03s
+
+[TRAIN] --- Batch 18 ---
+[TRAIN][Epoch 3][Batch 018] Loss: 0.1505 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 18 complete. Time: 0.03s
+
+[TRAIN] --- Batch 19 ---
+[TRAIN][Epoch 3][Batch 019] Loss: 2.1006 | Preds: [0.88] | Targets: [0.]
+[TRAIN] Batch 19 complete. Time: 0.03s
+
+[DATA] Loading .pt file #20: ../preprocess/preprocessed_train/DUKE_082.pt
+[TRAIN] --- Batch 20 ---
+[TRAIN][Epoch 3][Batch 020] Loss: 0.1414 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 20 complete. Time: 0.03s
+
+[TRAIN] --- Batch 21 ---
+[TRAIN][Epoch 3][Batch 021] Loss: 0.1869 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 21 complete. Time: 0.03s
+
+[TRAIN] --- Batch 22 ---
+[TRAIN][Epoch 3][Batch 022] Loss: 0.1780 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 22 complete. Time: 0.03s
+
+[TRAIN] --- Batch 23 ---
+[TRAIN][Epoch 3][Batch 023] Loss: 0.1703 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 23 complete. Time: 0.03s
+
+[TRAIN] --- Batch 24 ---
+[TRAIN][Epoch 3][Batch 024] Loss: 1.8544 | Preds: [0.84] | Targets: [0.]
+[TRAIN] Batch 24 complete. Time: 0.03s
+
+[TRAIN] --- Batch 25 ---
+[TRAIN][Epoch 3][Batch 025] Loss: 0.1994 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 25 complete. Time: 0.03s
+
+[TRAIN] --- Batch 26 ---
+[TRAIN][Epoch 3][Batch 026] Loss: 0.1543 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 26 complete. Time: 0.03s
+
+[TRAIN] --- Batch 27 ---
+[TRAIN][Epoch 3][Batch 027] Loss: 0.1921 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 27 complete. Time: 0.03s
+
+[TRAIN] --- Batch 28 ---
+[TRAIN][Epoch 3][Batch 028] Loss: 0.2149 | Preds: [0.81] | Targets: [1.]
+[TRAIN] Batch 28 complete. Time: 0.03s
+
+[TRAIN] --- Batch 29 ---
+[TRAIN][Epoch 3][Batch 029] Loss: 0.1976 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 29 complete. Time: 0.03s
+
+[TRAIN] --- Batch 30 ---
+[TRAIN][Epoch 3][Batch 030] Loss: 0.1662 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 30 complete. Time: 0.03s
+
+[TRAIN] --- Batch 31 ---
+[TRAIN][Epoch 3][Batch 031] Loss: 0.1843 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 31 complete. Time: 0.03s
+
+[TRAIN] --- Batch 32 ---
+[TRAIN][Epoch 3][Batch 032] Loss: 0.1576 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 32 complete. Time: 0.03s
+
+[DATA] Loading .pt file #10: ../preprocess/preprocessed_train/DUKE_041.pt
+[TRAIN] --- Batch 33 ---
+[TRAIN][Epoch 3][Batch 033] Loss: 0.1374 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 33 complete. Time: 0.03s
+
+[TRAIN] --- Batch 34 ---
+[TRAIN][Epoch 3][Batch 034] Loss: 0.1322 | Preds: [0.88] | Targets: [1.]
+[TRAIN] Batch 34 complete. Time: 0.03s
+
+[TRAIN] --- Batch 35 ---
+[TRAIN][Epoch 3][Batch 035] Loss: 2.2117 | Preds: [0.89] | Targets: [0.]
+[TRAIN] Batch 35 complete. Time: 0.03s
+
+[TRAIN] --- Batch 36 ---
+[TRAIN][Epoch 3][Batch 036] Loss: 2.1424 | Preds: [0.88] | Targets: [0.]
+[TRAIN] Batch 36 complete. Time: 0.03s
+
+[TRAIN] --- Batch 37 ---
+[TRAIN][Epoch 3][Batch 037] Loss: 0.1358 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 37 complete. Time: 0.03s
+
+[TRAIN] --- Batch 38 ---
+[TRAIN][Epoch 3][Batch 038] Loss: 2.0571 | Preds: [0.87] | Targets: [0.]
+[TRAIN] Batch 38 complete. Time: 0.03s
+
+[TRAIN] --- Batch 39 ---
+[TRAIN][Epoch 3][Batch 039] Loss: 0.1826 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 39 complete. Time: 0.03s
+
+[TRAIN] --- Batch 40 ---
+[TRAIN][Epoch 3][Batch 040] Loss: 0.2130 | Preds: [0.81] | Targets: [1.]
+[TRAIN] Batch 40 complete. Time: 0.03s
+
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192.pt
+[TRAIN] --- Batch 41 ---
+[TRAIN][Epoch 3][Batch 041] Loss: 1.2690 | Preds: [0.72] | Targets: [0.]
+[TRAIN] Batch 41 complete. Time: 0.03s
+
+[TRAIN] --- Batch 42 ---
+[TRAIN][Epoch 3][Batch 042] Loss: 0.3140 | Preds: [0.73] | Targets: [1.]
+[TRAIN] Batch 42 complete. Time: 0.03s
+
+[TRAIN] --- Batch 43 ---
+[TRAIN][Epoch 3][Batch 043] Loss: 0.4416 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 43 complete. Time: 0.03s
+
+[TRAIN] --- Batch 44 ---
+[TRAIN][Epoch 3][Batch 044] Loss: 0.3882 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 44 complete. Time: 0.03s
+
+[TRAIN] --- Batch 45 ---
+[TRAIN][Epoch 3][Batch 045] Loss: 0.4910 | Preds: [0.61] | Targets: [1.]
+[TRAIN] Batch 45 complete. Time: 0.03s
+
+[TRAIN] --- Batch 46 ---
+[TRAIN][Epoch 3][Batch 046] Loss: 0.9151 | Preds: [0.6] | Targets: [0.]
+[TRAIN] Batch 46 complete. Time: 0.03s
+
+[TRAIN] --- Batch 47 ---
+[TRAIN][Epoch 3][Batch 047] Loss: 0.8967 | Preds: [0.59] | Targets: [0.]
+[TRAIN] Batch 47 complete. Time: 0.03s
+
+[TRAIN] --- Batch 48 ---
+[TRAIN][Epoch 3][Batch 048] Loss: 0.4844 | Preds: [0.62] | Targets: [1.]
+[TRAIN] Batch 48 complete. Time: 0.03s
+
+[TRAIN] --- Batch 49 ---
+[TRAIN][Epoch 3][Batch 049] Loss: 0.8285 | Preds: [0.56] | Targets: [0.]
+[TRAIN] Batch 49 complete. Time: 0.03s
+
+[TRAIN] --- Batch 50 ---
+[TRAIN][Epoch 3][Batch 050] Loss: 0.7863 | Preds: [0.54] | Targets: [0.]
+[TRAIN] Batch 50 complete. Time: 0.03s
+
+[TRAIN] --- Batch 51 ---
+[TRAIN][Epoch 3][Batch 051] Loss: 0.6667 | Preds: [0.51] | Targets: [1.]
+[TRAIN] Batch 51 complete. Time: 0.03s
+
+[TRAIN] --- Batch 52 ---
+[TRAIN][Epoch 3][Batch 052] Loss: 0.7180 | Preds: [0.49] | Targets: [1.]
+[TRAIN] Batch 52 complete. Time: 0.03s
+
+[TRAIN] --- Batch 53 ---
+[TRAIN][Epoch 3][Batch 053] Loss: 0.6723 | Preds: [0.51] | Targets: [1.]
+[TRAIN] Batch 53 complete. Time: 0.03s
+
+[TRAIN] --- Batch 54 ---
+[TRAIN][Epoch 3][Batch 054] Loss: 0.5913 | Preds: [0.45] | Targets: [0.]
+[TRAIN] Batch 54 complete. Time: 0.03s
+
+[TRAIN] --- Batch 55 ---
+[TRAIN][Epoch 3][Batch 055] Loss: 0.6240 | Preds: [0.54] | Targets: [1.]
+[TRAIN] Batch 55 complete. Time: 0.03s
+
+[TRAIN] --- Batch 56 ---
+[TRAIN][Epoch 3][Batch 056] Loss: 0.8424 | Preds: [0.43] | Targets: [1.]
+[TRAIN] Batch 56 complete. Time: 0.03s
+
+[TRAIN] --- Batch 57 ---
+[TRAIN][Epoch 3][Batch 057] Loss: 0.6134 | Preds: [0.54] | Targets: [1.]
+[TRAIN] Batch 57 complete. Time: 0.03s
+
+[TRAIN] --- Batch 58 ---
+[TRAIN][Epoch 3][Batch 058] Loss: 0.7307 | Preds: [0.48] | Targets: [1.]
+[TRAIN] Batch 58 complete. Time: 0.03s
+
+[TRAIN] --- Batch 59 ---
+[TRAIN][Epoch 3][Batch 059] Loss: 0.3956 | Preds: [0.67] | Targets: [1.]
+[TRAIN] Batch 59 complete. Time: 0.03s
+
+[TRAIN] --- Batch 60 ---
+[TRAIN][Epoch 3][Batch 060] Loss: 1.5744 | Preds: [0.79] | Targets: [0.]
+[TRAIN] Batch 60 complete. Time: 0.03s
+
+[TRAIN] --- Batch 61 ---
+[TRAIN][Epoch 3][Batch 061] Loss: 0.2570 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 61 complete. Time: 0.03s
+
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328.pt
+[TRAIN] --- Batch 62 ---
+[TRAIN][Epoch 3][Batch 062] Loss: 0.2497 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 62 complete. Time: 0.03s
+
+[TRAIN] --- Batch 63 ---
+[TRAIN][Epoch 3][Batch 063] Loss: 0.2464 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 63 complete. Time: 0.03s
+
+[TRAIN] --- Batch 64 ---
+[TRAIN][Epoch 3][Batch 064] Loss: 1.5148 | Preds: [0.78] | Targets: [0.]
+[TRAIN] Batch 64 complete. Time: 0.03s
+
+[TRAIN] --- Batch 65 ---
+[TRAIN][Epoch 3][Batch 065] Loss: 0.2247 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 65 complete. Time: 0.03s
+
+[TRAIN] --- Batch 66 ---
+[TRAIN][Epoch 3][Batch 066] Loss: 0.1686 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 66 complete. Time: 0.03s
+
+[TRAIN] --- Batch 67 ---
+[TRAIN][Epoch 3][Batch 067] Loss: 0.1635 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 67 complete. Time: 0.03s
+
+[TRAIN] --- Batch 68 ---
+[TRAIN][Epoch 3][Batch 068] Loss: 1.9287 | Preds: [0.85] | Targets: [0.]
+[TRAIN] Batch 68 complete. Time: 0.03s
+
+[TRAIN] --- Batch 69 ---
+[TRAIN][Epoch 3][Batch 069] Loss: 0.1852 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 69 complete. Time: 0.03s
+
+[TRAIN] --- Batch 70 ---
+[TRAIN][Epoch 3][Batch 070] Loss: 0.2006 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 70 complete. Time: 0.03s
+
+[TRAIN] --- Batch 71 ---
+[TRAIN][Epoch 3][Batch 071] Loss: 0.1531 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 71 complete. Time: 0.03s
+
+[TRAIN] --- Batch 72 ---
+[TRAIN][Epoch 3][Batch 072] Loss: 1.5909 | Preds: [0.8] | Targets: [0.]
+[TRAIN] Batch 72 complete. Time: 0.03s
+
+[TRAIN] --- Batch 73 ---
+[TRAIN][Epoch 3][Batch 073] Loss: 1.7685 | Preds: [0.83] | Targets: [0.]
+[TRAIN] Batch 73 complete. Time: 0.03s
+
+[TRAIN] --- Batch 74 ---
+[TRAIN][Epoch 3][Batch 074] Loss: 1.8078 | Preds: [0.84] | Targets: [0.]
+[TRAIN] Batch 74 complete. Time: 0.03s
+
+[TRAIN] --- Batch 75 ---
+[TRAIN][Epoch 3][Batch 075] Loss: 0.2649 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 75 complete. Time: 0.03s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117.pt
+[TRAIN] --- Batch 76 ---
+[TRAIN][Epoch 3][Batch 076] Loss: 0.3911 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 76 complete. Time: 0.03s
+
+[TRAIN] --- Batch 77 ---
+[TRAIN][Epoch 3][Batch 077] Loss: 1.1258 | Preds: [0.68] | Targets: [0.]
+[TRAIN] Batch 77 complete. Time: 0.03s
+
+[TRAIN] --- Batch 78 ---
+[TRAIN][Epoch 3][Batch 078] Loss: 0.4884 | Preds: [0.61] | Targets: [1.]
+[TRAIN] Batch 78 complete. Time: 0.03s
+
+[TRAIN] --- Batch 79 ---
+[TRAIN][Epoch 3][Batch 079] Loss: 0.5753 | Preds: [0.56] | Targets: [1.]
+[TRAIN] Batch 79 complete. Time: 0.03s
+
+[VAL] Starting validation for epoch 3...
+[VAL] Batch 0
+[VAL] Batch 10
+[DATA] Loading .pt file #0: ../preprocess/preprocessed_train/DUKE_001.pt
+[DATA] Loading .pt file #60: ../preprocess/preprocessed_train/DUKE_239.pt
+[VAL][Epoch 3] Loss: 0.5623 | Accuracy: 0.5000
+[RESOURCE][Epoch 3] GPU Peak Memory: 2192.85 MB
+[SAVE] Model checkpoint saved to 'checkpoints/resnet_single_gpu_epoch3.pth'
+
+[TRAIN] === Epoch 4/5 ===
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 4][Batch 000] Loss: 0.6047 | Preds: [0.55] | Targets: [1.]
+[TRAIN] Batch 0 complete. Time: 0.03s
+
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 4][Batch 001] Loss: 0.6814 | Preds: [0.49] | Targets: [0.]
+[TRAIN] Batch 1 complete. Time: 0.03s
+
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 4][Batch 002] Loss: 0.5169 | Preds: [0.4] | Targets: [0.]
+[TRAIN] Batch 2 complete. Time: 0.03s
+
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 4][Batch 003] Loss: 0.6241 | Preds: [0.54] | Targets: [1.]
+[TRAIN] Batch 3 complete. Time: 0.03s
+
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 4][Batch 004] Loss: 0.6557 | Preds: [0.52] | Targets: [1.]
+[TRAIN] Batch 4 complete. Time: 0.03s
+
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 4][Batch 005] Loss: 0.6567 | Preds: [0.52] | Targets: [1.]
+[TRAIN] Batch 5 complete. Time: 0.03s
+
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 4][Batch 006] Loss: 0.6519 | Preds: [0.52] | Targets: [1.]
+[TRAIN] Batch 6 complete. Time: 0.03s
+
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 4][Batch 007] Loss: 0.8456 | Preds: [0.57] | Targets: [0.]
+[TRAIN] Batch 7 complete. Time: 0.03s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 4][Batch 008] Loss: 0.6084 | Preds: [0.54] | Targets: [1.]
+[TRAIN] Batch 8 complete. Time: 0.03s
+
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 4][Batch 009] Loss: 0.4423 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 9 complete. Time: 0.03s
+
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 4][Batch 010] Loss: 1.1727 | Preds: [0.69] | Targets: [0.]
+[TRAIN] Batch 10 complete. Time: 0.03s
+
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 4][Batch 011] Loss: 0.2954 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 11 complete. Time: 0.03s
+
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 4][Batch 012] Loss: 0.3603 | Preds: [0.7] | Targets: [1.]
+[TRAIN] Batch 12 complete. Time: 0.03s
+
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 4][Batch 013] Loss: 0.2631 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 13 complete. Time: 0.03s
+
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328.pt
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 4][Batch 014] Loss: 0.2807 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 14 complete. Time: 0.03s
+
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 4][Batch 015] Loss: 0.1933 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 15 complete. Time: 0.03s
+
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 4][Batch 016] Loss: 0.1905 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 16 complete. Time: 0.03s
+
+[TRAIN] --- Batch 17 ---
+[TRAIN][Epoch 4][Batch 017] Loss: 0.1520 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 17 complete. Time: 0.03s
+
+[TRAIN] --- Batch 18 ---
+[TRAIN][Epoch 4][Batch 018] Loss: 0.1510 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 18 complete. Time: 0.03s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117.pt
+[TRAIN] --- Batch 19 ---
+[TRAIN][Epoch 4][Batch 019] Loss: 0.1208 | Preds: [0.89] | Targets: [1.]
+[TRAIN] Batch 19 complete. Time: 0.03s
+
+[TRAIN] --- Batch 20 ---
+[TRAIN][Epoch 4][Batch 020] Loss: 0.1052 | Preds: [0.9] | Targets: [1.]
+[TRAIN] Batch 20 complete. Time: 0.03s
+
+[TRAIN] --- Batch 21 ---
+[TRAIN][Epoch 4][Batch 021] Loss: 2.4925 | Preds: [0.92] | Targets: [0.]
+[TRAIN] Batch 21 complete. Time: 0.03s
+
+[TRAIN] --- Batch 22 ---
+[TRAIN][Epoch 4][Batch 022] Loss: 2.3198 | Preds: [0.9] | Targets: [0.]
+[TRAIN] Batch 22 complete. Time: 0.03s
+
+[TRAIN] --- Batch 23 ---
+[TRAIN][Epoch 4][Batch 023] Loss: 0.1139 | Preds: [0.89] | Targets: [1.]
+[TRAIN] Batch 23 complete. Time: 0.03s
+
+[DATA] Loading .pt file #20: ../preprocess/preprocessed_train/DUKE_082.pt
+[TRAIN] --- Batch 24 ---
+[TRAIN][Epoch 4][Batch 024] Loss: 0.0985 | Preds: [0.91] | Targets: [1.]
+[TRAIN] Batch 24 complete. Time: 0.03s
+
+[TRAIN] --- Batch 25 ---
+[TRAIN][Epoch 4][Batch 025] Loss: 1.9185 | Preds: [0.85] | Targets: [0.]
+[TRAIN] Batch 25 complete. Time: 0.03s
+
+[TRAIN] --- Batch 26 ---
+[TRAIN][Epoch 4][Batch 026] Loss: 0.1325 | Preds: [0.88] | Targets: [1.]
+[TRAIN] Batch 26 complete. Time: 0.03s
+
+[TRAIN] --- Batch 27 ---
+[TRAIN][Epoch 4][Batch 027] Loss: 0.1795 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 27 complete. Time: 0.03s
+
+[TRAIN] --- Batch 28 ---
+[TRAIN][Epoch 4][Batch 028] Loss: 1.5096 | Preds: [0.78] | Targets: [0.]
+[TRAIN] Batch 28 complete. Time: 0.03s
+
+[TRAIN] --- Batch 29 ---
+[TRAIN][Epoch 4][Batch 029] Loss: 0.3245 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 29 complete. Time: 0.03s
+
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192.pt
+[TRAIN] --- Batch 30 ---
+[TRAIN][Epoch 4][Batch 030] Loss: 1.3072 | Preds: [0.73] | Targets: [0.]
+[TRAIN] Batch 30 complete. Time: 0.03s
+
+[TRAIN] --- Batch 31 ---
+[TRAIN][Epoch 4][Batch 031] Loss: 0.3501 | Preds: [0.7] | Targets: [1.]
+[TRAIN] Batch 31 complete. Time: 0.03s
+
+[TRAIN] --- Batch 32 ---
+[TRAIN][Epoch 4][Batch 032] Loss: 0.3050 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 32 complete. Time: 0.03s
+
+[TRAIN] --- Batch 33 ---
+[TRAIN][Epoch 4][Batch 033] Loss: 0.4017 | Preds: [0.67] | Targets: [1.]
+[TRAIN] Batch 33 complete. Time: 0.03s
+
+[DATA] Loading .pt file #10: ../preprocess/preprocessed_train/DUKE_041.pt
+[TRAIN] --- Batch 34 ---
+[TRAIN][Epoch 4][Batch 034] Loss: 0.3782 | Preds: [0.69] | Targets: [1.]
+[TRAIN] Batch 34 complete. Time: 0.03s
+
+[TRAIN] --- Batch 35 ---
+[TRAIN][Epoch 4][Batch 035] Loss: 0.4797 | Preds: [0.62] | Targets: [1.]
+[TRAIN] Batch 35 complete. Time: 0.03s
+
+[TRAIN] --- Batch 36 ---
+[TRAIN][Epoch 4][Batch 036] Loss: 0.3062 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 36 complete. Time: 0.03s
+
+[DATA] Loading .pt file #70: ../preprocess/preprocessed_train/DUKE_275.pt
+[TRAIN] --- Batch 37 ---
+[TRAIN][Epoch 4][Batch 037] Loss: 0.3873 | Preds: [0.68] | Targets: [1.]
+[TRAIN] Batch 37 complete. Time: 0.03s
+
+[TRAIN] --- Batch 38 ---
+[TRAIN][Epoch 4][Batch 038] Loss: 0.2447 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 38 complete. Time: 0.03s
+
+[TRAIN] --- Batch 39 ---
+[TRAIN][Epoch 4][Batch 039] Loss: 0.2740 | Preds: [0.76] | Targets: [1.]
+[TRAIN] Batch 39 complete. Time: 0.03s
+
+[TRAIN] --- Batch 40 ---
+[TRAIN][Epoch 4][Batch 040] Loss: 0.2012 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 40 complete. Time: 0.03s
+
+[DATA] Loading .pt file #90: ../preprocess/preprocessed_train/DUKE_378.pt
+[TRAIN] --- Batch 41 ---
+[TRAIN][Epoch 4][Batch 041] Loss: 0.1653 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 41 complete. Time: 0.03s
+
+[TRAIN] --- Batch 42 ---
+[TRAIN][Epoch 4][Batch 042] Loss: 1.9900 | Preds: [0.86] | Targets: [0.]
+[TRAIN] Batch 42 complete. Time: 0.03s
+
+[TRAIN] --- Batch 43 ---
+[TRAIN][Epoch 4][Batch 043] Loss: 0.2252 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 43 complete. Time: 0.03s
+
+[TRAIN] --- Batch 44 ---
+[TRAIN][Epoch 4][Batch 044] Loss: 0.1179 | Preds: [0.89] | Targets: [1.]
+[TRAIN] Batch 44 complete. Time: 0.03s
+
+[TRAIN] --- Batch 45 ---
+[TRAIN][Epoch 4][Batch 045] Loss: 0.1793 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 45 complete. Time: 0.03s
+
+[TRAIN] --- Batch 46 ---
+[TRAIN][Epoch 4][Batch 046] Loss: 1.7153 | Preds: [0.82] | Targets: [0.]
+[TRAIN] Batch 46 complete. Time: 0.03s
+
+[TRAIN] --- Batch 47 ---
+[TRAIN][Epoch 4][Batch 047] Loss: 0.1673 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 47 complete. Time: 0.03s
+
+[TRAIN] --- Batch 48 ---
+[TRAIN][Epoch 4][Batch 048] Loss: 0.1894 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 48 complete. Time: 0.03s
+
+[TRAIN] --- Batch 49 ---
+[TRAIN][Epoch 4][Batch 049] Loss: 0.1445 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 49 complete. Time: 0.03s
+
+[TRAIN] --- Batch 50 ---
+[TRAIN][Epoch 4][Batch 050] Loss: 1.9594 | Preds: [0.86] | Targets: [0.]
+[TRAIN] Batch 50 complete. Time: 0.03s
+
+[TRAIN] --- Batch 51 ---
+[TRAIN][Epoch 4][Batch 051] Loss: 0.2558 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 51 complete. Time: 0.03s
+
+[TRAIN] --- Batch 52 ---
+[TRAIN][Epoch 4][Batch 052] Loss: 0.1986 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 52 complete. Time: 0.03s
+
+[TRAIN] --- Batch 53 ---
+[TRAIN][Epoch 4][Batch 053] Loss: 0.1348 | Preds: [0.87] | Targets: [1.]
+[TRAIN] Batch 53 complete. Time: 0.03s
+
+[TRAIN] --- Batch 54 ---
+[TRAIN][Epoch 4][Batch 054] Loss: 0.2392 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 54 complete. Time: 0.03s
+
+[TRAIN] --- Batch 55 ---
+[TRAIN][Epoch 4][Batch 055] Loss: 1.6132 | Preds: [0.8] | Targets: [0.]
+[TRAIN] Batch 55 complete. Time: 0.03s
+
+[TRAIN] --- Batch 56 ---
+[TRAIN][Epoch 4][Batch 056] Loss: 1.8381 | Preds: [0.84] | Targets: [0.]
+[TRAIN] Batch 56 complete. Time: 0.03s
+
+[TRAIN] --- Batch 57 ---
+[TRAIN][Epoch 4][Batch 057] Loss: 0.2082 | Preds: [0.81] | Targets: [1.]
+[TRAIN] Batch 57 complete. Time: 0.03s
+
+[TRAIN] --- Batch 58 ---
+[TRAIN][Epoch 4][Batch 058] Loss: 0.2241 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 58 complete. Time: 0.03s
+
+[TRAIN] --- Batch 59 ---
+[TRAIN][Epoch 4][Batch 059] Loss: 0.2485 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 59 complete. Time: 0.03s
+
+[TRAIN] --- Batch 60 ---
+[TRAIN][Epoch 4][Batch 060] Loss: 0.3639 | Preds: [0.69] | Targets: [1.]
+[TRAIN] Batch 60 complete. Time: 0.03s
+
+[TRAIN] --- Batch 61 ---
+[TRAIN][Epoch 4][Batch 061] Loss: 1.1510 | Preds: [0.68] | Targets: [0.]
+[TRAIN] Batch 61 complete. Time: 0.03s
+
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150.pt
+[TRAIN] --- Batch 62 ---
+[TRAIN][Epoch 4][Batch 062] Loss: 0.4995 | Preds: [0.61] | Targets: [1.]
+[TRAIN] Batch 62 complete. Time: 0.03s
+
+[TRAIN] --- Batch 63 ---
+[TRAIN][Epoch 4][Batch 063] Loss: 0.4411 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 63 complete. Time: 0.03s
+
+[TRAIN] --- Batch 64 ---
+[TRAIN][Epoch 4][Batch 064] Loss: 0.4253 | Preds: [0.65] | Targets: [1.]
+[TRAIN] Batch 64 complete. Time: 0.03s
+
+[TRAIN] --- Batch 65 ---
+[TRAIN][Epoch 4][Batch 065] Loss: 0.3251 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 65 complete. Time: 0.03s
+
+[TRAIN] --- Batch 66 ---
+[TRAIN][Epoch 4][Batch 066] Loss: 0.3198 | Preds: [0.73] | Targets: [1.]
+[TRAIN] Batch 66 complete. Time: 0.03s
+
+[TRAIN] --- Batch 67 ---
+[TRAIN][Epoch 4][Batch 067] Loss: 1.5356 | Preds: [0.78] | Targets: [0.]
+[TRAIN] Batch 67 complete. Time: 0.03s
+
+[TRAIN] --- Batch 68 ---
+[TRAIN][Epoch 4][Batch 068] Loss: 0.2889 | Preds: [0.75] | Targets: [1.]
+[TRAIN] Batch 68 complete. Time: 0.03s
+
+[TRAIN] --- Batch 69 ---
+[TRAIN][Epoch 4][Batch 069] Loss: 1.0808 | Preds: [0.66] | Targets: [0.]
+[TRAIN] Batch 69 complete. Time: 0.03s
+
+[TRAIN] --- Batch 70 ---
+[TRAIN][Epoch 4][Batch 070] Loss: 0.3176 | Preds: [0.73] | Targets: [1.]
+[TRAIN] Batch 70 complete. Time: 0.03s
+
+[TRAIN] --- Batch 71 ---
+[TRAIN][Epoch 4][Batch 071] Loss: 0.3306 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 71 complete. Time: 0.03s
+
+[TRAIN] --- Batch 72 ---
+[TRAIN][Epoch 4][Batch 072] Loss: 1.4148 | Preds: [0.76] | Targets: [0.]
+[TRAIN] Batch 72 complete. Time: 0.03s
+
+[TRAIN] --- Batch 73 ---
+[TRAIN][Epoch 4][Batch 073] Loss: 1.2832 | Preds: [0.72] | Targets: [0.]
+[TRAIN] Batch 73 complete. Time: 0.03s
+
+[TRAIN] --- Batch 74 ---
+[TRAIN][Epoch 4][Batch 074] Loss: 0.3496 | Preds: [0.7] | Targets: [1.]
+[TRAIN] Batch 74 complete. Time: 0.03s
+
+[TRAIN] --- Batch 75 ---
+[TRAIN][Epoch 4][Batch 075] Loss: 0.3646 | Preds: [0.69] | Targets: [1.]
+[TRAIN] Batch 75 complete. Time: 0.03s
+
+[TRAIN] --- Batch 76 ---
+[TRAIN][Epoch 4][Batch 076] Loss: 0.9641 | Preds: [0.62] | Targets: [0.]
+[TRAIN] Batch 76 complete. Time: 0.03s
+
+[TRAIN] --- Batch 77 ---
+[TRAIN][Epoch 4][Batch 077] Loss: 0.8391 | Preds: [0.57] | Targets: [0.]
+[TRAIN] Batch 77 complete. Time: 0.03s
+
+[TRAIN] --- Batch 78 ---
+[TRAIN][Epoch 4][Batch 078] Loss: 0.5582 | Preds: [0.57] | Targets: [1.]
+[TRAIN] Batch 78 complete. Time: 0.03s
+
+[TRAIN] --- Batch 79 ---
+[TRAIN][Epoch 4][Batch 079] Loss: 0.6201 | Preds: [0.46] | Targets: [0.]
+[TRAIN] Batch 79 complete. Time: 0.03s
+
+[VAL] Starting validation for epoch 4...
+[VAL] Batch 0
+[VAL] Batch 10
+[DATA] Loading .pt file #0: ../preprocess/preprocessed_train/DUKE_001.pt
+[DATA] Loading .pt file #60: ../preprocess/preprocessed_train/DUKE_239.pt
+[VAL][Epoch 4] Loss: 0.6922 | Accuracy: 0.4500
+[RESOURCE][Epoch 4] GPU Peak Memory: 2192.85 MB
+[SAVE] Model checkpoint saved to 'checkpoints/resnet_single_gpu_epoch4.pth'
+
+[TRAIN] === Epoch 5/5 ===
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 5][Batch 000] Loss: 0.6962 | Preds: [0.5] | Targets: [1.]
+[TRAIN] Batch 0 complete. Time: 0.03s
+
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 5][Batch 001] Loss: 0.7164 | Preds: [0.49] | Targets: [1.]
+[TRAIN] Batch 1 complete. Time: 0.03s
+
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 5][Batch 002] Loss: 0.5144 | Preds: [0.4] | Targets: [0.]
+[TRAIN] Batch 2 complete. Time: 0.03s
+
+[DATA] Loading .pt file #90: ../preprocess/preprocessed_train/DUKE_378.pt
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 5][Batch 003] Loss: 0.7103 | Preds: [0.49] | Targets: [1.]
+[TRAIN] Batch 3 complete. Time: 0.03s
+
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 5][Batch 004] Loss: 0.7714 | Preds: [0.46] | Targets: [1.]
+[TRAIN] Batch 4 complete. Time: 0.03s
+
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 5][Batch 005] Loss: 0.8604 | Preds: [0.42] | Targets: [1.]
+[TRAIN] Batch 5 complete. Time: 0.03s
+
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 5][Batch 006] Loss: 0.3876 | Preds: [0.32] | Targets: [0.]
+[TRAIN] Batch 6 complete. Time: 0.03s
+
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 5][Batch 007] Loss: 0.9944 | Preds: [0.63] | Targets: [0.]
+[TRAIN] Batch 7 complete. Time: 0.03s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 5][Batch 008] Loss: 0.6115 | Preds: [0.46] | Targets: [0.]
+[TRAIN] Batch 8 complete. Time: 0.03s
+
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 5][Batch 009] Loss: 0.5550 | Preds: [0.57] | Targets: [1.]
+[TRAIN] Batch 9 complete. Time: 0.03s
+
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 5][Batch 010] Loss: 0.6165 | Preds: [0.54] | Targets: [1.]
+[TRAIN] Batch 10 complete. Time: 0.03s
+
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 5][Batch 011] Loss: 0.4510 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 11 complete. Time: 0.03s
+
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 5][Batch 012] Loss: 0.9078 | Preds: [0.6] | Targets: [0.]
+[TRAIN] Batch 12 complete. Time: 0.03s
+
+[DATA] Loading .pt file #20: ../preprocess/preprocessed_train/DUKE_082.pt
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 5][Batch 013] Loss: 0.6231 | Preds: [0.54] | Targets: [1.]
+[TRAIN] Batch 13 complete. Time: 0.03s
+
+[DATA] Loading .pt file #70: ../preprocess/preprocessed_train/DUKE_275.pt
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 5][Batch 014] Loss: 0.5167 | Preds: [0.6] | Targets: [1.]
+[TRAIN] Batch 14 complete. Time: 0.03s
+
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 5][Batch 015] Loss: 0.7048 | Preds: [0.51] | Targets: [0.]
+[TRAIN] Batch 15 complete. Time: 0.03s
+
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 5][Batch 016] Loss: 0.2614 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 16 complete. Time: 0.03s
+
+[TRAIN] --- Batch 17 ---
+[TRAIN][Epoch 5][Batch 017] Loss: 0.3617 | Preds: [0.7] | Targets: [1.]
+[TRAIN] Batch 17 complete. Time: 0.03s
+
+[TRAIN] --- Batch 18 ---
+[TRAIN][Epoch 5][Batch 018] Loss: 0.2456 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 18 complete. Time: 0.03s
+
+[TRAIN] --- Batch 19 ---
+[TRAIN][Epoch 5][Batch 019] Loss: 0.2038 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 19 complete. Time: 0.03s
+
+[TRAIN] --- Batch 20 ---
+[TRAIN][Epoch 5][Batch 020] Loss: 0.2161 | Preds: [0.81] | Targets: [1.]
+[TRAIN] Batch 20 complete. Time: 0.03s
+
+[TRAIN] --- Batch 21 ---
+[TRAIN][Epoch 5][Batch 021] Loss: 1.3936 | Preds: [0.75] | Targets: [0.]
+[TRAIN] Batch 21 complete. Time: 0.03s
+
+[TRAIN] --- Batch 22 ---
+[TRAIN][Epoch 5][Batch 022] Loss: 1.4287 | Preds: [0.76] | Targets: [0.]
+[TRAIN] Batch 22 complete. Time: 0.03s
+
+[TRAIN] --- Batch 23 ---
+[TRAIN][Epoch 5][Batch 023] Loss: 1.7250 | Preds: [0.82] | Targets: [0.]
+[TRAIN] Batch 23 complete. Time: 0.03s
+
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150.pt
+[TRAIN] --- Batch 24 ---
+[TRAIN][Epoch 5][Batch 024] Loss: 0.2242 | Preds: [0.8] | Targets: [1.]
+[TRAIN] Batch 24 complete. Time: 0.03s
+
+[TRAIN] --- Batch 25 ---
+[TRAIN][Epoch 5][Batch 025] Loss: 0.2602 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 25 complete. Time: 0.03s
+
+[TRAIN] --- Batch 26 ---
+[TRAIN][Epoch 5][Batch 026] Loss: 0.3378 | Preds: [0.71] | Targets: [1.]
+[TRAIN] Batch 26 complete. Time: 0.03s
+
+[TRAIN] --- Batch 27 ---
+[TRAIN][Epoch 5][Batch 027] Loss: 0.3243 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 27 complete. Time: 0.03s
+
+[TRAIN] --- Batch 28 ---
+[TRAIN][Epoch 5][Batch 028] Loss: 0.7832 | Preds: [0.54] | Targets: [0.]
+[TRAIN] Batch 28 complete. Time: 0.03s
+
+[TRAIN] --- Batch 29 ---
+[TRAIN][Epoch 5][Batch 029] Loss: 0.4428 | Preds: [0.64] | Targets: [1.]
+[TRAIN] Batch 29 complete. Time: 0.03s
+
+[TRAIN] --- Batch 30 ---
+[TRAIN][Epoch 5][Batch 030] Loss: 0.2980 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 30 complete. Time: 0.03s
+
+[TRAIN] --- Batch 31 ---
+[TRAIN][Epoch 5][Batch 031] Loss: 0.4046 | Preds: [0.67] | Targets: [1.]
+[TRAIN] Batch 31 complete. Time: 0.03s
+
+[TRAIN] --- Batch 32 ---
+[TRAIN][Epoch 5][Batch 032] Loss: 0.5373 | Preds: [0.58] | Targets: [1.]
+[TRAIN] Batch 32 complete. Time: 0.03s
+
+[TRAIN] --- Batch 33 ---
+[TRAIN][Epoch 5][Batch 033] Loss: 0.8509 | Preds: [0.57] | Targets: [0.]
+[TRAIN] Batch 33 complete. Time: 0.03s
+
+[TRAIN] --- Batch 34 ---
+[TRAIN][Epoch 5][Batch 034] Loss: 0.2444 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 34 complete. Time: 0.03s
+
+[TRAIN] --- Batch 35 ---
+[TRAIN][Epoch 5][Batch 035] Loss: 0.2043 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 35 complete. Time: 0.03s
+
+[TRAIN] --- Batch 36 ---
+[TRAIN][Epoch 5][Batch 036] Loss: 1.1846 | Preds: [0.69] | Targets: [0.]
+[TRAIN] Batch 36 complete. Time: 0.03s
+
+[TRAIN] --- Batch 37 ---
+[TRAIN][Epoch 5][Batch 037] Loss: 0.2490 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 37 complete. Time: 0.03s
+
+[TRAIN] --- Batch 38 ---
+[TRAIN][Epoch 5][Batch 038] Loss: 0.2332 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 38 complete. Time: 0.03s
+
+[TRAIN] --- Batch 39 ---
+[TRAIN][Epoch 5][Batch 039] Loss: 0.2374 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 39 complete. Time: 0.03s
+
+[TRAIN] --- Batch 40 ---
+[TRAIN][Epoch 5][Batch 040] Loss: 1.5730 | Preds: [0.79] | Targets: [0.]
+[TRAIN] Batch 40 complete. Time: 0.03s
+
+[TRAIN] --- Batch 41 ---
+[TRAIN][Epoch 5][Batch 041] Loss: 0.3071 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 41 complete. Time: 0.03s
+
+[TRAIN] --- Batch 42 ---
+[TRAIN][Epoch 5][Batch 042] Loss: 0.1792 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 42 complete. Time: 0.03s
+
+[TRAIN] --- Batch 43 ---
+[TRAIN][Epoch 5][Batch 043] Loss: 0.2839 | Preds: [0.75] | Targets: [1.]
+[TRAIN] Batch 43 complete. Time: 0.03s
+
+[DATA] Loading .pt file #10: ../preprocess/preprocessed_train/DUKE_041.pt
+[TRAIN] --- Batch 44 ---
+[TRAIN][Epoch 5][Batch 044] Loss: 0.1812 | Preds: [0.83] | Targets: [1.]
+[TRAIN] Batch 44 complete. Time: 0.03s
+
+[TRAIN] --- Batch 45 ---
+[TRAIN][Epoch 5][Batch 045] Loss: 0.2667 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 45 complete. Time: 0.03s
+
+[TRAIN] --- Batch 46 ---
+[TRAIN][Epoch 5][Batch 046] Loss: 0.2325 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 46 complete. Time: 0.03s
+
+[TRAIN] --- Batch 47 ---
+[TRAIN][Epoch 5][Batch 047] Loss: 0.1781 | Preds: [0.84] | Targets: [1.]
+[TRAIN] Batch 47 complete. Time: 0.03s
+
+[TRAIN] --- Batch 48 ---
+[TRAIN][Epoch 5][Batch 048] Loss: 0.1224 | Preds: [0.88] | Targets: [1.]
+[TRAIN] Batch 48 complete. Time: 0.03s
+
+[TRAIN] --- Batch 49 ---
+[TRAIN][Epoch 5][Batch 049] Loss: 0.1566 | Preds: [0.86] | Targets: [1.]
+[TRAIN] Batch 49 complete. Time: 0.03s
+
+[TRAIN] --- Batch 50 ---
+[TRAIN][Epoch 5][Batch 050] Loss: 1.8722 | Preds: [0.85] | Targets: [0.]
+[TRAIN] Batch 50 complete. Time: 0.03s
+
+[TRAIN] --- Batch 51 ---
+[TRAIN][Epoch 5][Batch 051] Loss: 0.2371 | Preds: [0.79] | Targets: [1.]
+[TRAIN] Batch 51 complete. Time: 0.03s
+
+[TRAIN] --- Batch 52 ---
+[TRAIN][Epoch 5][Batch 052] Loss: 0.1645 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 52 complete. Time: 0.03s
+
+[TRAIN] --- Batch 53 ---
+[TRAIN][Epoch 5][Batch 053] Loss: 2.0599 | Preds: [0.87] | Targets: [0.]
+[TRAIN] Batch 53 complete. Time: 0.03s
+
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328.pt
+[TRAIN] --- Batch 54 ---
+[TRAIN][Epoch 5][Batch 054] Loss: 0.1129 | Preds: [0.89] | Targets: [1.]
+[TRAIN] Batch 54 complete. Time: 0.03s
+
+[TRAIN] --- Batch 55 ---
+[TRAIN][Epoch 5][Batch 055] Loss: 0.1175 | Preds: [0.89] | Targets: [1.]
+[TRAIN] Batch 55 complete. Time: 0.03s
+
+[TRAIN] --- Batch 56 ---
+[TRAIN][Epoch 5][Batch 056] Loss: 1.7191 | Preds: [0.82] | Targets: [0.]
+[TRAIN] Batch 56 complete. Time: 0.03s
+
+[TRAIN] --- Batch 57 ---
+[TRAIN][Epoch 5][Batch 057] Loss: 0.1611 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 57 complete. Time: 0.03s
+
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192.pt
+[TRAIN] --- Batch 58 ---
+[TRAIN][Epoch 5][Batch 058] Loss: 1.3028 | Preds: [0.73] | Targets: [0.]
+[TRAIN] Batch 58 complete. Time: 0.03s
+
+[TRAIN] --- Batch 59 ---
+[TRAIN][Epoch 5][Batch 059] Loss: 1.1953 | Preds: [0.7] | Targets: [0.]
+[TRAIN] Batch 59 complete. Time: 0.03s
+
+[TRAIN] --- Batch 60 ---
+[TRAIN][Epoch 5][Batch 060] Loss: 0.2094 | Preds: [0.81] | Targets: [1.]
+[TRAIN] Batch 60 complete. Time: 0.03s
+
+[TRAIN] --- Batch 61 ---
+[TRAIN][Epoch 5][Batch 061] Loss: 0.9130 | Preds: [0.6] | Targets: [0.]
+[TRAIN] Batch 61 complete. Time: 0.03s
+
+[TRAIN] --- Batch 62 ---
+[TRAIN][Epoch 5][Batch 062] Loss: 0.8024 | Preds: [0.55] | Targets: [0.]
+[TRAIN] Batch 62 complete. Time: 0.03s
+
+[TRAIN] --- Batch 63 ---
+[TRAIN][Epoch 5][Batch 063] Loss: 0.9696 | Preds: [0.38] | Targets: [1.]
+[TRAIN] Batch 63 complete. Time: 0.03s
+
+[TRAIN] --- Batch 64 ---
+[TRAIN][Epoch 5][Batch 064] Loss: 0.9611 | Preds: [0.38] | Targets: [1.]
+[TRAIN] Batch 64 complete. Time: 0.03s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117.pt
+[TRAIN] --- Batch 65 ---
+[TRAIN][Epoch 5][Batch 065] Loss: 0.9242 | Preds: [0.4] | Targets: [1.]
+[TRAIN] Batch 65 complete. Time: 0.03s
+
+[TRAIN] --- Batch 66 ---
+[TRAIN][Epoch 5][Batch 066] Loss: 0.6800 | Preds: [0.51] | Targets: [1.]
+[TRAIN] Batch 66 complete. Time: 0.03s
+
+[TRAIN] --- Batch 67 ---
+[TRAIN][Epoch 5][Batch 067] Loss: 0.6964 | Preds: [0.5] | Targets: [1.]
+[TRAIN] Batch 67 complete. Time: 0.03s
+
+[TRAIN] --- Batch 68 ---
+[TRAIN][Epoch 5][Batch 068] Loss: 0.7666 | Preds: [0.46] | Targets: [1.]
+[TRAIN] Batch 68 complete. Time: 0.03s
+
+[TRAIN] --- Batch 69 ---
+[TRAIN][Epoch 5][Batch 069] Loss: 0.7234 | Preds: [0.51] | Targets: [0.]
+[TRAIN] Batch 69 complete. Time: 0.03s
+
+[TRAIN] --- Batch 70 ---
+[TRAIN][Epoch 5][Batch 070] Loss: 0.7951 | Preds: [0.45] | Targets: [1.]
+[TRAIN] Batch 70 complete. Time: 0.03s
+
+[TRAIN] --- Batch 71 ---
+[TRAIN][Epoch 5][Batch 071] Loss: 0.4344 | Preds: [0.65] | Targets: [1.]
+[TRAIN] Batch 71 complete. Time: 0.03s
+
+[TRAIN] --- Batch 72 ---
+[TRAIN][Epoch 5][Batch 072] Loss: 0.4901 | Preds: [0.61] | Targets: [1.]
+[TRAIN] Batch 72 complete. Time: 0.03s
+
+[TRAIN] --- Batch 73 ---
+[TRAIN][Epoch 5][Batch 073] Loss: 1.0789 | Preds: [0.66] | Targets: [0.]
+[TRAIN] Batch 73 complete. Time: 0.03s
+
+[TRAIN] --- Batch 74 ---
+[TRAIN][Epoch 5][Batch 074] Loss: 0.3334 | Preds: [0.72] | Targets: [1.]
+[TRAIN] Batch 74 complete. Time: 0.03s
+
+[TRAIN] --- Batch 75 ---
+[TRAIN][Epoch 5][Batch 075] Loss: 0.2967 | Preds: [0.74] | Targets: [1.]
+[TRAIN] Batch 75 complete. Time: 0.03s
+
+[TRAIN] --- Batch 76 ---
+[TRAIN][Epoch 5][Batch 076] Loss: 0.2612 | Preds: [0.77] | Targets: [1.]
+[TRAIN] Batch 76 complete. Time: 0.03s
+
+[TRAIN] --- Batch 77 ---
+[TRAIN][Epoch 5][Batch 077] Loss: 0.2440 | Preds: [0.78] | Targets: [1.]
+[TRAIN] Batch 77 complete. Time: 0.03s
+
+[TRAIN] --- Batch 78 ---
+[TRAIN][Epoch 5][Batch 078] Loss: 0.1946 | Preds: [0.82] | Targets: [1.]
+[TRAIN] Batch 78 complete. Time: 0.03s
+
+[TRAIN] --- Batch 79 ---
+[TRAIN][Epoch 5][Batch 079] Loss: 0.1601 | Preds: [0.85] | Targets: [1.]
+[TRAIN] Batch 79 complete. Time: 0.03s
+
+[VAL] Starting validation for epoch 5...
+[VAL] Batch 0
+[VAL] Batch 10
+[DATA] Loading .pt file #0: ../preprocess/preprocessed_train/DUKE_001.pt
+[DATA] Loading .pt file #60: ../preprocess/preprocessed_train/DUKE_239.pt
+[VAL][Epoch 5] Loss: 0.4627 | Accuracy: 0.8000
+[RESOURCE][Epoch 5] GPU Peak Memory: 2194.16 MB
+[SAVE] Model checkpoint saved to 'checkpoints/resnet_single_gpu_epoch5.pth'
+[TIME] Total training time: 33.68 seconds

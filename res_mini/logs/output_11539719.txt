@@ -1,0 +1,15 @@
+[MAIN] Calling train_single_gpu()
+[TRAIN] Starting training on single GPU...
+[TRAIN] Using device: cuda
+[INFO] Initializing MRIDataset for split='train'...
+[INFO] Found 100 patients for split 'train'.
+[INFO] Loaded 100 valid image-mask pairs.
+[INFO] Label distribution: {1: np.int64(74), 0: np.int64(26)}
+[TRAIN] Dataloader ready with 100 batches.
+[INFO] Initializing ResNet model...
+[INFO] Model initialized.
+[TRAIN] Entering training loop.
+[DATA] Preprocessing sample 28: DUKE_260
+[PREPROCESS] Loading MRI from: ../images/DUKE_260/DUKE_260_0000.nii.gz
+[PREPROCESS] Loading mask from: ../segmentations/automatic/DUKE_260.nii.gz
+[PREPROCESS] Running N4 bias correction...

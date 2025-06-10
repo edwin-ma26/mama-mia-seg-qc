@@ -1,0 +1,308 @@
+[MAIN] Calling train_single_gpu()...
+[MAIN] Starting training script...
+[MAIN] Using device: cuda
+[DATA] Loading dataset...
+[INFO] Initializing MRIDataset for: ../preprocess/preprocessed_train
+[INFO] Found 200 resampled.pt files in ../preprocess/preprocessed_train
+[DATA] Splitting into train/val sets...
+[DATA] Train size: 160, Val size: 40
+[DATA] Initializing dataloaders...
+[DATA] Dataloaders ready.
+[MODEL] Generating model...
+[MODEL] Initializing ResNet model...
+[MODEL] Model initialized.
+[TRAIN] Starting training loop...
+
+[TRAIN] === Epoch 1/10 ===
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328_resampled.pt
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150_resampled.pt
+[DATA] Loading .pt file #190: ../preprocess/preprocessed_train/DUKE_879_resampled.pt
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 1][Batch 000] Loss: 0.7278 | Preds: [0.61 0.74 0.6  0.62 0.79 0.61 0.65 0.61] | Targets: [0. 1. 1. 1. 0. 1. 0. 1.]
+[TRAIN] Batch 0 complete. Time: 12.07s
+
+[DATA] Loading .pt file #100: ../preprocess/preprocessed_train/DUKE_435_resampled.pt
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192_resampled.pt
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 1][Batch 001] Loss: 1.2259 | Preds: [0.11 0.01 0.96 0.96 0.3  0.62 0.96 0.78] | Targets: [0. 1. 0. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 1 complete. Time: 0.21s
+
+[DATA] Loading .pt file #140: ../preprocess/preprocessed_train/DUKE_645_resampled.pt
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 1][Batch 002] Loss: 0.4495 | Preds: [0.92 0.42 0.88 0.03 0.92 0.92 0.9  0.05] | Targets: [1. 1. 1. 0. 1. 1. 0. 0.]
+[TRAIN] Batch 2 complete. Time: 0.21s
+
+[DATA] Loading .pt file #180: ../preprocess/preprocessed_train/DUKE_822_resampled.pt
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 1][Batch 003] Loss: 1.2590 | Preds: [0.88 0.88 0.67 0.88 0.04 0.53 0.59 0.76] | Targets: [1. 0. 0. 0. 1. 1. 1. 1.]
+[TRAIN] Batch 3 complete. Time: 0.21s
+
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 1][Batch 004] Loss: 0.4313 | Preds: [0.57 0.66 0.64 0.59 0.64 0.73 0.73 0.64] | Targets: [1. 1. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 4 complete. Time: 0.21s
+
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 1][Batch 005] Loss: 0.6260 | Preds: [0.94 0.91 0.81 0.47 0.54 0.46 0.5  0.7 ] | Targets: [1. 1. 0. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 5 complete. Time: 0.21s
+
+[DATA] Loading .pt file #120: ../preprocess/preprocessed_train/DUKE_534_resampled.pt
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 1][Batch 006] Loss: 0.4283 | Preds: [0.63 0.63 0.79 0.95 0.98 0.49 0.49 0.57] | Targets: [1. 1. 1. 1. 1. 0. 1. 0.]
+[TRAIN] Batch 6 complete. Time: 0.20s
+
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 1][Batch 007] Loss: 0.4908 | Preds: [0.96 0.55 0.99 0.53 0.51 0.93 0.52 0.65] | Targets: [1. 1. 1. 0. 1. 1. 0. 0.]
+[TRAIN] Batch 7 complete. Time: 0.21s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 1][Batch 008] Loss: 0.5715 | Preds: [0.55 0.55 0.55 0.55 0.56 0.56 0.55 1.  ] | Targets: [1. 1. 1. 0. 0. 1. 1. 1.]
+[TRAIN] Batch 8 complete. Time: 0.20s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117_resampled.pt
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 1][Batch 009] Loss: 0.3652 | Preds: [0.6  0.79 0.52 0.53 1.   0.52 0.98 0.89] | Targets: [1. 1. 0. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 9 complete. Time: 0.21s
+
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 1][Batch 010] Loss: 1.1761 | Preds: [0.98 0.57 0.56 0.63 0.95 0.87 1.   0.58] | Targets: [0. 1. 1. 1. 0. 1. 1. 1.]
+[TRAIN] Batch 10 complete. Time: 0.21s
+
+[DATA] Loading .pt file #160: ../preprocess/preprocessed_train/DUKE_723_resampled.pt
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 1][Batch 011] Loss: 0.5941 | Preds: [0.73 0.81 0.96 0.69 0.99 0.72 0.74 0.99] | Targets: [1. 1. 0. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 11 complete. Time: 0.21s
+
+[DATA] Loading .pt file #10: ../preprocess/preprocessed_train/DUKE_041_resampled.pt
+[DATA] Loading .pt file #170: ../preprocess/preprocessed_train/DUKE_776_resampled.pt
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 1][Batch 012] Loss: 1.0065 | Preds: [0.99 0.94 0.79 0.98 0.86 0.87 0.78 0.8 ] | Targets: [1. 1. 1. 0. 0. 1. 1. 0.]
+[TRAIN] Batch 12 complete. Time: 0.20s
+
+[DATA] Loading .pt file #150: ../preprocess/preprocessed_train/DUKE_681_resampled.pt
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 1][Batch 013] Loss: 1.2640 | Preds: [0.88 0.78 0.85 0.91 0.83 0.85 1.   0.86] | Targets: [1. 1. 0. 1. 0. 1. 0. 1.]
+[TRAIN] Batch 13 complete. Time: 0.21s
+
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 1][Batch 014] Loss: 0.6636 | Preds: [0.92 0.92 0.83 0.92 0.86 0.85 0.87 0.98] | Targets: [0. 1. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 14 complete. Time: 0.20s
+
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 1][Batch 015] Loss: 1.1509 | Preds: [0.91 0.83 0.88 0.88 0.96 0.96 0.86 0.84] | Targets: [1. 1. 0. 1. 0. 0. 1. 1.]
+[TRAIN] Batch 15 complete. Time: 0.20s
+
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 1][Batch 016] Loss: 0.1291 | Preds: [0.84 0.92 0.79 0.92 0.82 0.91 0.92 0.92] | Targets: [1. 1. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 16 complete. Time: 0.21s
+
+[TRAIN] --- Batch 17 ---
+[TRAIN][Epoch 1][Batch 017] Loss: 0.5735 | Preds: [0.89 0.84 0.86 0.89 0.77 0.87 0.82 0.89] | Targets: [1. 1. 1. 0. 0. 1. 1. 1.]
+[TRAIN] Batch 17 complete. Time: 0.20s
+
+[TRAIN] --- Batch 18 ---
+[TRAIN][Epoch 1][Batch 018] Loss: 0.4182 | Preds: [0.83 0.88 0.8  0.86 0.78 0.85 0.88 0.88] | Targets: [1. 1. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 18 complete. Time: 0.20s
+
+[TRAIN] --- Batch 19 ---
+[TRAIN][Epoch 1][Batch 019] Loss: 0.4078 | Preds: [0.84 0.85 0.85 0.84 0.78 0.83 0.86 0.85] | Targets: [1. 1. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 19 complete. Time: 0.21s
+
+[VAL] Starting validation for epoch 1...
+[DATA] Loading .pt file #90: ../preprocess/preprocessed_train/DUKE_378_resampled.pt
+[VAL] Batch 0
+[DATA] Loading .pt file #110: ../preprocess/preprocessed_train/DUKE_489_resampled.pt
+[DATA] Loading .pt file #0: ../preprocess/preprocessed_train/DUKE_001_resampled.pt
+[DATA] Loading .pt file #130: ../preprocess/preprocessed_train/DUKE_597_resampled.pt
+[DATA] Loading .pt file #60: ../preprocess/preprocessed_train/DUKE_239_resampled.pt
+[DATA] Loading .pt file #70: ../preprocess/preprocessed_train/DUKE_275_resampled.pt
+[DATA] Loading .pt file #20: ../preprocess/preprocessed_train/DUKE_082_resampled.pt
+[VAL][Epoch 1] Loss: 0.6686 | Accuracy: 0.6500
+[RESOURCE][Epoch 1] GPU Peak Memory: 31055.53 MB
+[SAVE] Model checkpoint saved to 'checkpoints/resnet_single_gpu_epoch1.pth'
+
+[TRAIN] === Epoch 2/10 ===
+[DATA] Loading .pt file #140: ../preprocess/preprocessed_train/DUKE_645_resampled.pt
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 2][Batch 000] Loss: 0.3624 | Preds: [0.82 0.8  0.81 0.78 0.82 0.91 0.78 0.8 ] | Targets: [1. 1. 1. 0. 1. 1. 1. 1.]
+[TRAIN] Batch 0 complete. Time: 0.20s
+
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 2][Batch 001] Loss: 0.4824 | Preds: [0.8  0.95 0.72 0.7  0.77 0.82 0.79 0.72] | Targets: [1. 1. 0. 1. 1. 1. 1. 0.]
+[TRAIN] Batch 1 complete. Time: 0.21s
+
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 2][Batch 002] Loss: 0.2579 | Preds: [0.66 0.63 0.9  0.91 0.65 0.73 0.93 0.85] | Targets: [1. 1. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 2 complete. Time: 0.20s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117_resampled.pt
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 2][Batch 003] Loss: 0.3444 | Preds: [0.83 0.88 0.98 0.56 0.74 0.81 0.6  0.55] | Targets: [1. 1. 1. 1. 1. 1. 1. 0.]
+[TRAIN] Batch 3 complete. Time: 0.20s
+
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 2][Batch 004] Loss: 0.7882 | Preds: [0.84 0.49 0.86 0.96 0.64 0.88 0.48 0.91] | Targets: [1. 1. 1. 0. 0. 1. 1. 1.]
+[TRAIN] Batch 4 complete. Time: 0.20s
+
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 2][Batch 005] Loss: 0.6302 | Preds: [0.97 0.68 0.78 0.94 0.56 0.81 0.89 0.56] | Targets: [1. 0. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 5 complete. Time: 0.20s
+
+[DATA] Loading .pt file #160: ../preprocess/preprocessed_train/DUKE_723_resampled.pt
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 2][Batch 006] Loss: 0.5444 | Preds: [0.64 0.88 0.65 0.71 0.97 0.68 0.93 0.7 ] | Targets: [0. 1. 1. 1. 1. 0. 1. 0.]
+[TRAIN] Batch 6 complete. Time: 0.21s
+
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 2][Batch 007] Loss: 0.4169 | Preds: [0.66 0.65 0.65 0.77 0.94 0.96 0.72 0.88] | Targets: [1. 0. 0. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 7 complete. Time: 0.20s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 2][Batch 008] Loss: 1.0107 | Preds: [0.95 0.65 0.88 0.95 0.6  0.92 0.61 0.61] | Targets: [1. 1. 1. 0. 1. 0. 0. 1.]
+[TRAIN] Batch 8 complete. Time: 0.20s
+
+[DATA] Loading .pt file #100: ../preprocess/preprocessed_train/DUKE_435_resampled.pt
+[DATA] Loading .pt file #120: ../preprocess/preprocessed_train/DUKE_534_resampled.pt
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 2][Batch 009] Loss: 0.4204 | Preds: [0.61 0.66 0.89 0.93 0.61 0.62 0.95 0.86] | Targets: [0. 0. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 9 complete. Time: 0.20s
+
+[DATA] Loading .pt file #190: ../preprocess/preprocessed_train/DUKE_879_resampled.pt
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 2][Batch 010] Loss: 0.9227 | Preds: [0.73 0.88 0.62 0.7  0.89 0.69 0.96 0.61] | Targets: [1. 0. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 10 complete. Time: 0.21s
+
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 2][Batch 011] Loss: 0.5156 | Preds: [0.73 0.82 0.86 0.81 0.72 0.79 0.84 0.79] | Targets: [1. 1. 1. 1. 0. 0. 1. 1.]
+[TRAIN] Batch 11 complete. Time: 0.21s
+
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 2][Batch 012] Loss: 0.4470 | Preds: [0.76 0.74 0.79 0.74 0.82 0.75 0.77 0.66] | Targets: [1. 1. 0. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 12 complete. Time: 0.20s
+
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150_resampled.pt
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 2][Batch 013] Loss: 0.6898 | Preds: [0.66 0.81 0.47 0.86 0.81 0.82 0.79 0.83] | Targets: [1. 1. 1. 0. 1. 1. 0. 1.]
+[TRAIN] Batch 13 complete. Time: 0.21s
+
+[DATA] Loading .pt file #180: ../preprocess/preprocessed_train/DUKE_822_resampled.pt
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 2][Batch 014] Loss: 0.5705 | Preds: [0.82 0.84 0.87 0.88 0.82 0.44 0.84 0.35] | Targets: [1. 1. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 14 complete. Time: 0.21s
+
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192_resampled.pt
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 2][Batch 015] Loss: 0.9172 | Preds: [0.81 0.82 0.87 0.82 0.89 0.88 0.38 0.39] | Targets: [1. 1. 0. 0. 1. 0. 0. 0.]
+[TRAIN] Batch 15 complete. Time: 0.20s
+
+[DATA] Loading .pt file #150: ../preprocess/preprocessed_train/DUKE_681_resampled.pt
+[DATA] Loading .pt file #10: ../preprocess/preprocessed_train/DUKE_041_resampled.pt
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 2][Batch 016] Loss: 0.6816 | Preds: [0.83 0.84 0.84 0.87 0.87 0.28 0.6  0.7 ] | Targets: [1. 0. 1. 1. 1. 1. 1. 0.]
+[TRAIN] Batch 16 complete. Time: 0.21s
+
+[TRAIN] --- Batch 17 ---
+[TRAIN][Epoch 2][Batch 017] Loss: 0.5523 | Preds: [0.18 0.79 0.77 0.82 0.79 0.78 0.78 0.77] | Targets: [0. 1. 1. 1. 1. 0. 0. 1.]
+[TRAIN] Batch 17 complete. Time: 0.20s
+
+[TRAIN] --- Batch 18 ---
+[TRAIN][Epoch 2][Batch 018] Loss: 0.3830 | Preds: [0.77 0.38 0.79 0.46 0.83 0.79 0.85 0.79] | Targets: [1. 1. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 18 complete. Time: 0.20s
+
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328_resampled.pt
+[DATA] Loading .pt file #170: ../preprocess/preprocessed_train/DUKE_776_resampled.pt
+[TRAIN] --- Batch 19 ---
+[TRAIN][Epoch 2][Batch 019] Loss: 0.6414 | Preds: [0.78 0.49 0.82 0.7  0.77 0.77 0.82 0.57] | Targets: [1. 1. 0. 0. 1. 1. 1. 1.]
+[TRAIN] Batch 19 complete. Time: 0.20s
+
+[VAL] Starting validation for epoch 2...
+[DATA] Loading .pt file #90: ../preprocess/preprocessed_train/DUKE_378_resampled.pt
+[VAL] Batch 0
+[DATA] Loading .pt file #110: ../preprocess/preprocessed_train/DUKE_489_resampled.pt
+[DATA] Loading .pt file #0: ../preprocess/preprocessed_train/DUKE_001_resampled.pt
+[DATA] Loading .pt file #130: ../preprocess/preprocessed_train/DUKE_597_resampled.pt
+[DATA] Loading .pt file #60: ../preprocess/preprocessed_train/DUKE_239_resampled.pt
+[DATA] Loading .pt file #70: ../preprocess/preprocessed_train/DUKE_275_resampled.pt
+[DATA] Loading .pt file #20: ../preprocess/preprocessed_train/DUKE_082_resampled.pt
+[VAL][Epoch 2] Loss: 0.7745 | Accuracy: 0.6500
+[RESOURCE][Epoch 2] GPU Peak Memory: 11915.96 MB
+[SAVE] Model checkpoint saved to 'checkpoints/resnet_single_gpu_epoch2.pth'
+
+[TRAIN] === Epoch 3/10 ===
+[TRAIN] --- Batch 0 ---
+[TRAIN][Epoch 3][Batch 000] Loss: 0.4401 | Preds: [0.72 0.8  0.76 0.69 0.69 0.73 0.75 0.76] | Targets: [1. 1. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 0 complete. Time: 0.21s
+
+[DATA] Loading .pt file #50: ../preprocess/preprocessed_train/DUKE_192_resampled.pt
+[DATA] Loading .pt file #80: ../preprocess/preprocessed_train/DUKE_328_resampled.pt
+[TRAIN] --- Batch 1 ---
+[TRAIN][Epoch 3][Batch 001] Loss: 0.5437 | Preds: [0.76 0.73 0.76 0.76 0.73 0.8  0.74 0.79] | Targets: [1. 1. 1. 0. 0. 1. 1. 1.]
+[TRAIN] Batch 1 complete. Time: 0.20s
+
+[TRAIN] --- Batch 2 ---
+[TRAIN][Epoch 3][Batch 002] Loss: 0.5902 | Preds: [0.84 0.75 0.7  0.7  0.68 0.7  0.94 0.68] | Targets: [1. 1. 1. 1. 0. 0. 1. 0.]
+[TRAIN] Batch 2 complete. Time: 0.20s
+
+[DATA] Loading .pt file #30: ../preprocess/preprocessed_train/DUKE_117_resampled.pt
+[TRAIN] --- Batch 3 ---
+[TRAIN][Epoch 3][Batch 003] Loss: 0.8622 | Preds: [0.6  0.77 0.65 0.79 0.61 0.63 0.94 0.91] | Targets: [0. 0. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 3 complete. Time: 0.20s
+
+[TRAIN] --- Batch 4 ---
+[TRAIN][Epoch 3][Batch 004] Loss: 1.0162 | Preds: [0.9  0.63 0.68 0.58 0.98 0.56 0.65 0.56] | Targets: [1. 1. 1. 0. 0. 1. 0. 0.]
+[TRAIN] Batch 4 complete. Time: 0.21s
+
+[DATA] Loading .pt file #40: ../preprocess/preprocessed_train/DUKE_150_resampled.pt
+[DATA] Loading .pt file #150: ../preprocess/preprocessed_train/DUKE_681_resampled.pt
+[TRAIN] --- Batch 5 ---
+[TRAIN][Epoch 3][Batch 005] Loss: 0.5154 | Preds: [0.99 0.62 0.63 0.58 0.61 0.53 0.59 0.61] | Targets: [1. 1. 1. 1. 1. 0. 0. 1.]
+[TRAIN] Batch 5 complete. Time: 0.20s
+
+[TRAIN] --- Batch 6 ---
+[TRAIN][Epoch 3][Batch 006] Loss: 1.0591 | Preds: [0.51 0.88 0.51 0.61 0.58 0.52 0.74 0.98] | Targets: [1. 1. 1. 1. 1. 1. 0. 0.]
+[TRAIN] Batch 6 complete. Time: 0.21s
+
+[DATA] Loading .pt file #120: ../preprocess/preprocessed_train/DUKE_534_resampled.pt
+[TRAIN] --- Batch 7 ---
+[TRAIN][Epoch 3][Batch 007] Loss: 0.4904 | Preds: [0.54 0.53 0.56 0.55 0.78 0.8  0.98 0.58] | Targets: [1. 0. 1. 1. 1. 1. 1. 0.]
+[TRAIN] Batch 7 complete. Time: 0.21s
+
+[TRAIN] --- Batch 8 ---
+[TRAIN][Epoch 3][Batch 008] Loss: 0.6625 | Preds: [0.83 0.6  0.95 0.6  0.68 0.81 0.58 0.7 ] | Targets: [1. 1. 1. 1. 0. 0. 0. 1.]
+[TRAIN] Batch 8 complete. Time: 0.20s
+
+[TRAIN] --- Batch 9 ---
+[TRAIN][Epoch 3][Batch 009] Loss: 0.6272 | Preds: [0.84 0.63 0.94 0.67 0.62 0.67 0.64 0.68] | Targets: [0. 0. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 9 complete. Time: 0.21s
+
+[TRAIN] --- Batch 10 ---
+[TRAIN][Epoch 3][Batch 010] Loss: 0.4182 | Preds: [0.82 0.77 0.85 0.73 0.66 0.7  0.67 0.68] | Targets: [1. 1. 1. 1. 1. 0. 1. 1.]
+[TRAIN] Batch 10 complete. Time: 0.21s
+
+[DATA] Loading .pt file #100: ../preprocess/preprocessed_train/DUKE_435_resampled.pt
+[TRAIN] --- Batch 11 ---
+[TRAIN][Epoch 3][Batch 011] Loss: 0.4379 | Preds: [0.71 0.79 0.87 0.69 0.79 0.58 0.72 0.7 ] | Targets: [1. 1. 1. 1. 1. 1. 0. 1.]
+[TRAIN] Batch 11 complete. Time: 0.20s
+
+[TRAIN] --- Batch 12 ---
+[TRAIN][Epoch 3][Batch 012] Loss: 0.2808 | Preds: [0.8  0.9  0.67 0.69 0.74 0.84 0.75 0.68] | Targets: [1. 1. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 12 complete. Time: 0.21s
+
+[TRAIN] --- Batch 13 ---
+[TRAIN][Epoch 3][Batch 013] Loss: 0.2662 | Preds: [0.71 0.84 0.6  0.78 0.73 0.78 0.87 0.86] | Targets: [1. 1. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 13 complete. Time: 0.20s
+
+[DATA] Loading .pt file #190: ../preprocess/preprocessed_train/DUKE_879_resampled.pt
+[TRAIN] --- Batch 14 ---
+[TRAIN][Epoch 3][Batch 014] Loss: 0.4935 | Preds: [0.72 0.83 0.82 0.91 0.82 0.9  0.62 0.71] | Targets: [1. 1. 1. 1. 0. 1. 0. 1.]
+[TRAIN] Batch 14 complete. Time: 0.20s
+
+[DATA] Loading .pt file #160: ../preprocess/preprocessed_train/DUKE_723_resampled.pt
+[TRAIN] --- Batch 15 ---
+[TRAIN][Epoch 3][Batch 015] Loss: 0.2173 | Preds: [0.75 0.89 0.84 0.58 0.89 0.83 0.92 0.78] | Targets: [1. 1. 1. 1. 1. 1. 1. 1.]
+[TRAIN] Batch 15 complete. Time: 0.21s
+
+[TRAIN] --- Batch 16 ---
+[TRAIN][Epoch 3][Batch 016] Loss: 0.5027 | Preds: [0.87 0.8  0.94 0.95 0.87 0.65 0.94 0.66] | Targets: [0. 1. 1. 1. 1. 0. 1. 1.]
+[TRAIN] Batch 16 complete. Time: 0.21s
+
+[DATA] Loading .pt file #170: ../preprocess/preprocessed_train/DUKE_776_resampled.pt

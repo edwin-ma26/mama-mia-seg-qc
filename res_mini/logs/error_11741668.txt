@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/anvil/projects/x-cis230030/mama-mia/res_mini/main.py", line 152, in <module>
+    train_single_gpu()
+  File "/anvil/projects/x-cis230030/mama-mia/res_mini/main.py", line 89, in train_single_gpu
+    for i, (inputs, labels) in enumerate(train_loader):
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 789, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 211, in collate
+    return [
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 212, in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 155, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "/home/x-ema1/.conda/envs/cnn-env/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 272, in collate_tensor_fn
+    return torch.stack(batch, 0, out=out)
+RuntimeError: stack expects each tensor to be equal size, but got [2, 360, 360, 176] at entry 0 and [2, 390, 390, 270] at entry 1
