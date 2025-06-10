@@ -8,3 +8,4 @@ train_test_splits.csv
 clinical_and_imaging_info.xlsx
 preliminary_automatic_segmentations_quality_scores.csv
 SYNAPSE_METADATA_MANIFEST.tsv
+res_mini/checkpoints
