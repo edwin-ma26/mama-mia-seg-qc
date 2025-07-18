@@ -1,0 +1,13 @@
+{
+    "chunk": 1,
+    "best_f1": 0.6733333333333333,
+    "best_epoch": 6,
+    "final_auc": 0.5122436350777935,
+    "final_accuracy": 0.507537688442211,
+    "parameters": {
+        "weight_decay": 0.0,
+        "entropy_reg_weight": 0.0,
+        "dropout_rate": 0.2,
+        "attn_dropout_rate": 0.1
+    }
+}

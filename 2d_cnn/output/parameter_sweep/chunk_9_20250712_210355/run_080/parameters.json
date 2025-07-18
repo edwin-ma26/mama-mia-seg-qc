@@ -1,0 +1,6 @@
+{
+    "weight_decay": 0.001,
+    "entropy_reg_weight": 0.001,
+    "dropout_rate": 0.3,
+    "attn_dropout_rate": 0.2
+}

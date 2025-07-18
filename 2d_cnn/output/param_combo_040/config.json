@@ -1,0 +1,8 @@
+{
+    "entropy_reg_weight": 0.005,
+    "attn_dropout": 0.1,
+    "weight_decay": 0.0001,
+    "best_val_f1": 0.695852534562212,
+    "best_epoch": 7,
+    "final_epoch": 15
+}
