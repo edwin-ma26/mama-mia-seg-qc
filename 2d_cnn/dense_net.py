@@ -1,3 +1,8 @@
+"""
+DenseNet-based 2D CNN for medical image quality assessment.
+Modified to load images and masks on-the-fly to reduce memory usage.
+"""
+
 import os
 import numpy as np
 import pandas as pd
@@ -13,10 +18,12 @@ import json
 import itertools
 from datetime import datetime
 from monai.transforms import RandFlipd, RandAffined, Compose, Rand3DElasticd, Rand2DElasticd
-from monai.data import MetaTensor
 import concurrent.futures
+from monai.data import MetaTensor
+import monai
 from skimage.transform import resize
-import random
+
+
 
 # ---------- Config ----------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -38,9 +45,6 @@ TEMPERATURE = 1.0  # Set to >1.0 for softer, <1.0 for sharper. Tune as needed.
 # Entropy regularization config
 ENTROPY_REG_WEIGHT = 0.0005  # Weight for entropy regularization (encourages uniform attention)
 
-# Attention regularization config
-ATTN_BIAS_WEIGHT = 0.01  # You can tune this
-
 # ---------- Parameter Sweep Config ----------
 # Set to True to run parameter sweep, False to run single training
 RUN_PARAMETER_SWEEP = False
@@ -51,41 +55,65 @@ PARAMETER_COMBINATIONS = {
     'entropy_reg_weight': [0.0, 0.0005, 0.001],  # Entropy regularization
     'dropout_rate': [0.1, 0.2, 0.3],  # Dropout rate for main layers
     'attn_dropout_rate': [0.0, 0.1, 0.2],  # Dropout rate for attention
+    'densenet_version': ['densenet121', 'densenet169'],  # DenseNet version
 }
 
 # Chunk configuration for running 1/9th of parameters at a time
-CHUNK_SIZE = 9  # Total combinations / 9 = 81 / 9 = 9 combinations per chunk
+# With new densenet_version parameter: 3*3*3*3*2 = 162 combinations
+CHUNK_SIZE = 18  # Total combinations / 9 = 162 / 9 = 18 combinations per chunk
 CHUNK_INDEX = 8  # Set this to 0-8 to run different chunks (0-based indexing)
 SWEEP_OUTPUT_DIR = "./output/parameter_sweep"  # Fixed output directory for all chunks
 
+BATCH_SIZE = 8
+
 # ---------- Model ----------
-class CNNBackbone(nn.Module):
-    def __init__(self, img_size=IMG_SIZE, dropout_rate=0.1, attn_dropout=0.1):
-        super(CNNBackbone, self).__init__()
-        self.conv1 = nn.Conv2d(2, 32, 3, padding=1)
-        self.conv2 = nn.Conv2d(32, 64, 3, padding=1)
-        self.conv3 = nn.Conv2d(64, 128, 3, padding=1)
-        self.pool = nn.MaxPool2d(2)
+class DenseNetBackbone(nn.Module):
+    def __init__(self, img_size=IMG_SIZE, dropout_rate=0.1, attn_dropout=0.1, densenet_version='densenet121'):
+        super(DenseNetBackbone, self).__init__()
+        
+        # Load pre-trained DenseNet
+        if densenet_version == 'densenet121':
+            self.densenet = torch.hub.load('pytorch/vision:v0.10.0', 'densenet121', pretrained=True)
+            feature_dim = 1024
+        elif densenet_version == 'densenet169':
+            self.densenet = torch.hub.load('pytorch/vision:v0.10.0', 'densenet169', pretrained=True)
+            feature_dim = 1664
+        elif densenet_version == 'densenet201':
+            self.densenet = torch.hub.load('pytorch/vision:v0.10.0', 'densenet201', pretrained=True)
+            feature_dim = 1920
+        else:
+            raise ValueError(f"Unsupported DenseNet version: {densenet_version}")
+        
+        # Replace the first conv layer to accept 2 channels instead of 3
+        self.densenet.features.conv0 = nn.Conv2d(2, 64, kernel_size=7, stride=2, padding=3, bias=False)
+        
+        # Remove the classifier layer from DenseNet as we'll add our own
+        self.densenet.classifier = nn.Identity()
+        
+        # Add our custom layers
         self.dropout = nn.Dropout(dropout_rate)
-
-        # compute new feature map size after 3 poolings
-        fmap_size = (img_size[0] // 8) * (img_size[1] // 8)
-
-        self.fc1 = nn.Linear(128 * fmap_size, 128)
+        self.fc1 = nn.Linear(feature_dim, 128)
         self.slice_classifier = nn.Linear(128, 1)
         self.slice_attn = nn.Linear(128, 1)
         self.attn_dropout = nn.Dropout(attn_dropout)
 
     def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
-        x = self.pool(F.relu(self.conv3(x)))
-        x = x.view(x.size(0), -1)
-        x = self.dropout(x)
-        x = F.relu(self.fc1(x))
-        logit = self.slice_classifier(x).squeeze(-1)
-        attn_weight = self.slice_attn(x).squeeze(-1)
+        # Extract features using DenseNet backbone
+        features = self.densenet.features(x)
+        
+        # Global average pooling
+        out = F.adaptive_avg_pool2d(features, (1, 1))
+        out = torch.flatten(out, 1)
+        
+        # Apply dropout and fully connected layers
+        out = self.dropout(out)
+        out = F.relu(self.fc1(out))
+        
+        # Generate logits and attention weights
+        logit = self.slice_classifier(out).squeeze(-1)
+        attn_weight = self.slice_attn(out).squeeze(-1)
         attn_weight = self.attn_dropout(attn_weight)
+        
         return logit, attn_weight
 
 # ---------- Dataset ----------
@@ -93,10 +121,11 @@ class AllSlicesDataset(Dataset):
     def __init__(self, patient_ids, img_size=IMG_SIZE, augment=False):
         self.patient_data = []
         self.augment = augment
+        self.img_size = img_size
         qs_df = pd.read_csv("../preliminary_automatic_segmentations_quality_scores.csv", dtype=str)
         qs_df = qs_df.set_index("patient_id")
 
-        # Define MONAI augmentations (dictionary-based from test2.ipynb)
+        # Define MONAI augmentations (dictionary-based from 2d_aug.py)
         self.augmentation_transforms = Compose([
             RandFlipd(keys=["image", "mask"], prob=0.5, spatial_axis=1),
             RandAffined(
@@ -110,7 +139,6 @@ class AllSlicesDataset(Dataset):
             ),
             Rand2DElasticd(
                 keys=["image", "mask"],
-                spatial_size=(384, 384),
                 magnitude_range=(2, 5),
                 prob=0.95,
                 mode=("bilinear", "nearest"),
@@ -148,9 +176,11 @@ class AllSlicesDataset(Dataset):
 
             # Check image size and skip if larger than IMG_SIZE
             try:
-                img = sitk.GetArrayFromImage(sitk.ReadImage(img_path))  # [Z, Y, X]
-                if img.shape[1] > IMG_SIZE[0] or img.shape[2] > IMG_SIZE[1]:
-                    print(f"Skipping patient {pid} due to image size {img.shape[1:]} > {IMG_SIZE}")
+                # Only read header to check dimensions, don't load full image
+                img_sitk = sitk.ReadImage(img_path)
+                img_size_check = img_sitk.GetSize()  # Returns (X, Y, Z)
+                if img_size_check[0] > IMG_SIZE[1] or img_size_check[1] > IMG_SIZE[0]:
+                    print(f"Skipping patient {pid} due to image size {img_size_check[:2]} > {IMG_SIZE}")
                     continue
             except Exception as e:
                 print(f"Error reading image for patient {pid}: {e}")
@@ -175,14 +205,14 @@ class AllSlicesDataset(Dataset):
         mask_slice_resized = np.expand_dims(mask_slice_resized, axis=0)
         
         if augment_fn:
-            # Use dict for compatibility, but do not use MetaTensor
+            # Wrap with MetaTensor to enable tracking
             data_dict = {
-                "image": img_slice_resized.copy(),
-                "mask": mask_slice_resized.copy()
+                "image": MetaTensor(img_slice_resized.copy()),  # ensure new memory
+                "mask": MetaTensor(mask_slice_resized.copy())
             }
             augmented = augment_fn(data_dict)
-            img_slice_resized = augmented["image"]
-            mask_slice_resized = augmented["mask"]
+            img_slice_resized = augmented["image"].numpy()
+            mask_slice_resized = augmented["mask"].numpy()
         
         # Remove channel dimension and stack as 2-channel tensor
         img_slice_final = img_slice_resized.squeeze(0)  # (384, 384)
@@ -193,17 +223,28 @@ class AllSlicesDataset(Dataset):
 
     def __getitem__(self, idx):
         pid, img_path, mask_path, label = self.patient_data[idx]
+        
+        # Load images and masks on-the-fly
         img = sitk.GetArrayFromImage(sitk.ReadImage(img_path))  # [Z, Y, X]
         mask = sitk.GetArrayFromImage(sitk.ReadImage(mask_path))
 
-        # Sequentially process each slice (no threading)
-        slices = [self.process_slice(i, img, mask, self.augmentation_transforms if self.augment else None)
-                  for i in range(mask.shape[0])]
+        # Process slices sequentially
+        slices = []
+        for i in range(mask.shape[0]):
+            slice_tensor = self.process_slice(i, img, mask, self.augmentation_transforms if self.augment else None)
+            slices.append(slice_tensor)
 
         if len(slices) == 0:
-            slices.append(torch.zeros((2, *img.shape[1:]), dtype=torch.float32))
+            # Fallback if no slices were processed
+            slices.append(torch.zeros((2, *self.img_size), dtype=torch.float32))
 
         return torch.stack(slices), torch.tensor(label, dtype=torch.float32), pid
+    
+    def clear_cache(self):
+        """Clear any cached data if needed"""
+        # This method can be used to clear any cached data
+        # Currently no caching is implemented, but this provides a hook for future optimization
+        pass
 
 # ---------- Train/Test Split ----------
 def load_patient_ids(file_path):
@@ -237,33 +278,17 @@ def calculate_class_weights(dataset):
 
     return pos_weight
 
-train_file = '../filter/train_patients.txt'
-test_file = '../filter/test_patients.txt'
-
-train_patient_ids = load_patient_ids(train_file)
-test_patient_ids = load_patient_ids(test_file)
-
-print(f"Loading training dataset with {len(train_patient_ids)} patients...")
-train_dataset = AllSlicesDataset(train_patient_ids, augment=True)
-print(f"Training dataset loaded: {len(train_dataset)} samples")
-
-print(f"Loading test dataset with {len(test_patient_ids)} patients...")
-test_dataset = AllSlicesDataset(test_patient_ids, augment=False)
-print(f"Test dataset loaded: {len(test_dataset)} samples")
-
-train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True, num_workers=4)  # 1 patient per batch
-test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=4)
-
-# Calculate class weights for training set
-pos_weight = calculate_class_weights(train_dataset)
+# Calculate class weights for training set (will be calculated after datasets are created)
+pos_weight = None
 
 def train_model_with_params(params, train_loader, test_loader, run_id, output_dir):
     """Train a model with specific regularization parameters"""
     
     # Create model with specified dropout rates
-    model = CNNBackbone(
+    model = DenseNetBackbone(
         dropout_rate=params['dropout_rate'],
-        attn_dropout=params['attn_dropout_rate']
+        attn_dropout=params['attn_dropout_rate'],
+        densenet_version=params.get('densenet_version', 'densenet121')  # Use parameter or default
     ).to(DEVICE)
     
     # Create optimizer with specified weight decay
@@ -290,7 +315,8 @@ def train_model_with_params(params, train_loader, test_loader, run_id, output_di
     print(f"RUN {run_id} (Chunk {CHUNK_INDEX + 1}): weight_decay={params['weight_decay']}, "
           f"entropy_reg={params['entropy_reg_weight']}, "
           f"dropout={params['dropout_rate']}, "
-          f"attn_dropout={params['attn_dropout_rate']}")
+          f"attn_dropout={params['attn_dropout_rate']}, "
+          f"densenet_version={params.get('densenet_version', 'densenet121')}")
     print(f"{'='*60}")
     
     for epoch in range(EPOCHS):
@@ -304,38 +330,32 @@ def train_model_with_params(params, train_loader, test_loader, run_id, output_di
             patient_label = patient_label.to(DEVICE)
 
             optimizer.zero_grad()
-            slice_logits, slice_attn = model(patient_slices)
+            # --- Batch forward pass for patient slices ---
+            slice_logits_list = []
+            slice_attn_list = []
+            N = patient_slices.shape[0]
+            for i in range(0, N, BATCH_SIZE):
+                batch_slices = patient_slices[i:i+BATCH_SIZE]
+                batch_logits, batch_attn = model(batch_slices)
+                slice_logits_list.append(batch_logits.cpu())
+                slice_attn_list.append(batch_attn.cpu())
+            slice_logits = torch.cat(slice_logits_list).to(DEVICE)
+            slice_attn = torch.cat(slice_attn_list).to(DEVICE)
+            # --- End batch forward pass ---
             weights = torch.softmax(slice_attn, dim=0)
             volume_logit = torch.sum(weights * slice_logits)
             scaled_logit = volume_logit / TEMPERATURE
-
+            
             # Calculate main classification loss
             classification_loss = criterion(scaled_logit.unsqueeze(0), patient_label)
-
+            
             # Calculate entropy regularization loss
             entropy = -torch.sum(weights * torch.log(weights + 1e-8))
             entropy_loss = -params['entropy_reg_weight'] * entropy
-
-            # --- ADD THIS BLOCK ---
-            mask = patient_slices[:, 1, :, :]  # [num_slices, 384, 384]
-            mask_area = mask.sum(dim=(1, 2))   # [num_slices]
-            importance_weights = mask_area / (mask_area.sum() + 1e-8)  # [num_slices]
-            # Clamp weights and importance_weights
-            weights = torch.clamp(weights, min=1e-6, max=1.0)
-            importance_weights = torch.clamp(importance_weights, min=1e-6, max=1.0)
-            attn_reg_loss = F.kl_div(weights.log(), importance_weights, reduction='batchmean')
-            # Or use mse_loss instead:
-            # attn_reg_loss = F.mse_loss(weights, importance_weights)
-            ATTN_BIAS_WEIGHT = 0.01  # Move to config if you want
-
-            # Debug: print logits and attention weights (first 5)
-            print("Slice logits:", slice_logits[:5].detach().cpu().numpy())
-            print("Attention weights:", slice_attn[:5].detach().cpu().numpy())
-
+            
             # Total loss
-            total_loss = classification_loss + entropy_loss + ATTN_BIAS_WEIGHT * attn_reg_loss
-            # --- END BLOCK ---
-
+            total_loss = classification_loss + entropy_loss
+            
             total_loss.backward()
             optimizer.step()
             running_loss += total_loss.item()
@@ -345,6 +365,10 @@ def train_model_with_params(params, train_loader, test_loader, run_id, output_di
             train_preds.append(1 if pred > 0.5 else 0)
             train_labels.append(int(patient_label.item()))
             train_logits.append(scaled_logit.item())
+            
+            # Clear GPU cache periodically to prevent memory buildup
+            if torch.cuda.is_available() and len(train_preds) % 10 == 0:
+                torch.cuda.empty_cache()
 
         avg_train_loss = running_loss / len(train_loader)
         train_acc = np.mean(np.array(train_preds) == np.array(train_labels))
@@ -377,7 +401,18 @@ def train_model_with_params(params, train_loader, test_loader, run_id, output_di
             for patient_slices, patient_label, patient_id in test_loader:
                 patient_slices = patient_slices.squeeze(0).to(DEVICE)
                 patient_label = patient_label.item()
-                slice_logits, slice_attn = model(patient_slices)
+                # --- Batch forward pass for patient slices ---
+                slice_logits_list = []
+                slice_attn_list = []
+                N = patient_slices.shape[0]
+                for i in range(0, N, BATCH_SIZE):
+                    batch_slices = patient_slices[i:i+BATCH_SIZE]
+                    batch_logits, batch_attn = model(batch_slices)
+                    slice_logits_list.append(batch_logits.cpu())
+                    slice_attn_list.append(batch_attn.cpu())
+                slice_logits = torch.cat(slice_logits_list).to(DEVICE)
+                slice_attn = torch.cat(slice_attn_list).to(DEVICE)
+                # --- End batch forward pass ---
                 weights = torch.softmax(slice_attn, dim=0)
                 volume_logit = torch.sum(weights * slice_logits)
                 scaled_logit = volume_logit / TEMPERATURE
@@ -389,29 +424,18 @@ def train_model_with_params(params, train_loader, test_loader, run_id, output_di
                 val_loss = criterion(scaled_logit.unsqueeze(0), torch.tensor([patient_label], device=DEVICE, dtype=torch.float32))
                 val_running_loss += val_loss.item()
 
-
+                # --- Save top-k attended slices with 1% probability ---
+                import random
                 if random.random() < 0.01:
                     topk = torch.topk(weights, k=3)
                     topk_indices = topk.indices.cpu().numpy()
                     topk_weights = topk.values.cpu().detach().numpy()
-                    base_filename = "topk_slices_test.txt"
-                    # Find next available id
-                    id_num = 0
-                    while True:
-                        filename = f"{base_filename}.{id_num}" if id_num > 0 else base_filename
-                        exists = False
-                        if os.path.exists(filename):
-                            # Check if this patient_id is already in the file
-                            with open(filename, "r") as f:
-                                for line in f:
-                                    if line.startswith(f"{patient_id[0]}:"):
-                                        exists = True
-                                        break
-                        if not exists:
-                            break
-                        id_num += 1
-                    with open(filename, "a") as f:
+                    with open("topk_slices_test.txt", "a") as f:
                         f.write(f"{patient_id[0]}: indices={topk_indices.tolist()}, weights={topk_weights.tolist()}\n")
+                
+                # Clear GPU cache periodically to prevent memory buildup
+                if torch.cuda.is_available() and len(preds) % 10 == 0:
+                    torch.cuda.empty_cache()
 
         acc = np.mean(np.array(preds) == np.array(labels))
         avg_val_loss = val_running_loss / len(test_loader)
@@ -517,7 +541,8 @@ def run_single_training():
         'weight_decay': 0.0001,
         'entropy_reg_weight': ENTROPY_REG_WEIGHT,
         'dropout_rate': 0.1,
-        'attn_dropout_rate': 0.1
+        'attn_dropout_rate': 0.1,
+        'densenet_version': 'densenet121'
     }
     
     result = train_model_with_params(default_params, train_loader, test_loader, 0, OUTPUT_DIR)
@@ -557,15 +582,24 @@ def print_chunk_info():
     print("=" * 60)
 
 if __name__ == "__main__":
-    run_single_training()
+    train_file = '../filter/train_patients.txt'
+    test_file = '../filter/test_patients.txt'
 
-    # Debug: check model logits and attention weights for a single batch
-    print("\n--- Debug: Single Batch Logits/Attention ---")
-    model = CNNBackbone().to(DEVICE)
-    model.train()
-    for patient_slices, patient_label, patient_id in train_loader:
-        patient_slices = patient_slices.squeeze(0).to(DEVICE)
-        slice_logits, slice_attn = model(patient_slices)
-        print("Slice logits:", slice_logits[:5].detach().cpu().numpy())
-        print("Slice attn:", slice_attn[:5].detach().cpu().numpy())
-        break
+    train_patient_ids = load_patient_ids(train_file)
+    test_patient_ids = load_patient_ids(test_file)
+
+    print(f"Loading training dataset with {len(train_patient_ids)} patients...")
+    train_dataset = AllSlicesDataset(train_patient_ids, augment=True)
+    print(f"Training dataset loaded: {len(train_dataset)} samples")
+
+    print(f"Loading test dataset with {len(test_patient_ids)} patients...")
+    test_dataset = AllSlicesDataset(test_patient_ids, augment=False)
+    print(f"Test dataset loaded: {len(test_dataset)} samples")
+
+    train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True, num_workers=2)  # 1 patient per batch
+    test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=2)
+
+    # Calculate class weights for weighted loss
+    pos_weight = calculate_class_weights(train_dataset)
+
+    run_single_training()
